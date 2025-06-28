@@ -7,7 +7,7 @@ import Footer from '@/components/footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Your Name - WordPress Plugin Developer',
+  title: 'Sadekur Rahman - WordPress Plugin Developer',
   description: 'Professional WordPress plugin developer specializing in custom solutions',
 }
 
