@@ -52,6 +52,6 @@
   }
   
   body {
-    @apply bg-background text-foreground font-primary;
+    @apply bg-primary text-white leading-loose font-primary;
   }
 }
