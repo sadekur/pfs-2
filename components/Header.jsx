@@ -6,13 +6,21 @@ import Nav from './Nav'
 const Header = () => {
   return (
     <header className='py-8 xl:py:12 text-white'>
-      <div className='container mx-auto'>
+      <div className='container mx-auto flex items-center justify-between'>
         <Link href="/">
           <h1 className='text-4xl font-semibold'>Sadekur <span className='text-accent'>Rahman</span> - Font Test Rahman</h1>
         </Link>
         {/* Desktop Nav */}
         <div className='hidden md:flex justify-between items-center mt-5'>
           <Nav />
+          <Link href="/contact">
+            <Button>Contact</Button>
+          </Link>
+        </div>
+
+        {/* Mobile Nav */}
+        <div className='flex md:hidden'>
+          mobile nav
         </div>
       </div>
 

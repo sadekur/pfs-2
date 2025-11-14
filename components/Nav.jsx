@@ -1,15 +1,34 @@
 import React from 'react'
 
+const links = [
+    {
+        name: 'home',
+        href: '/'
+    },
+    {
+        name: 'services',
+        href: '/services'
+    },
+    {
+        name: 'resume',
+        href: '/resume'
+    },
+    {
+        name: 'work',
+        href: '/work'
+    },
+    {
+        name: 'contact',
+        href: '/contact'
+    }
+]
+
 const Nav = () => {
   return (
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/add-blog">Add Blog</a></li>
-        <li><a href="/blogs">Blogs</a></li>
-      </ul>
+    <nav className=' flex gap-8'>
+        {links.map(link => (
+            <a key={link.name} href={link.href}>{link.name}</a>
+        ))}
     </nav>
   )
 }
