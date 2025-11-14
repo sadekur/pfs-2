@@ -1,3 +1,6 @@
+"use client"
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 const links = [
@@ -24,11 +27,19 @@ const links = [
 ]
 
 const Nav = () => {
+    const path = usePathname()
   return (
     <nav className=' flex gap-8'>
-        {links.map(link => (
-            <a key={link.name} href={link.href}>{link.name}</a>
-        ))}
+        {links.map((link, index) => {
+            // console.log(link.path, path);
+            console.log(link);
+            return (
+                <Link 
+                    href={link.href}
+                    key={index}
+                    className={`${path === link.href && "text-accent border-b-2 border-accent"} capitalize font-medium hover:text-accent transetion-all `}>{link.name} </Link>
+            );
+        })}
     </nav>
   )
 }
