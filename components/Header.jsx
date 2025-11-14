@@ -12,10 +12,10 @@ const Header = () => {
           <h1 className='text-4xl font-semibold'>Sadekur <span className='text-blue-500'>Rahman</span></h1>
         </Link>
         {/* Desktop Nav */}
-        <div className='hidden md:flex justify-between items-center mt-5'>
+        <div className='hidden md:flex justify-between items-center gap-[10px] mt-5'>
           <Nav />
           <Link href="/contact">
-            <Button>Contact</Button>
+            <Button>Hire Me</Button>
           </Link>
         </div>
 
