@@ -31,8 +31,6 @@ const Nav = () => {
   return (
     <nav className=' flex gap-8'>
         {links.map((link, index) => {
-            // console.log(link.path, path);
-            console.log(link);
             return (
                 <Link 
                     href={link.href}
