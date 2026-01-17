@@ -6,18 +6,17 @@ import React from "react";
 const PageTransection = ({ children }) => {
   const pathname = usePathname();
   return (
-    <AnimatePresence>
-      <div key={pathname}>
-        <motion.div
-          initial={{ opacity: 1 }}
-          animate={{
-            opacity: 0,
-            transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
-          }}
-          className="w-screen h-screen fixed top-0 bg-primary pointer-events-none"
-        />
+    <AnimatePresence mode="wait">
+      <motion.div
+        key={pathname}
+        initial={{ opacity: 0, x: 100 }}
+        animate={{ opacity: 1, x: 0 }}
+        exit={{ opacity: 0, x: -100 }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        className="min-h-screen"
+      >
         {children}
-      </div>
+      </motion.div>
     </AnimatePresence>
   );
 };

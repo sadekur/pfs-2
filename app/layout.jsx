@@ -2,7 +2,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageTransection from "@/components/PageTransection";
-import StairEffect from "@/components/StairEffect";
+
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -20,8 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={jetbrainsMono.variable}>
       <body className="font-primary"> {/* Apply the font class here */}
         <Header />
-        <StairEffect />
-        <PageTransection>{children}</PageTransection>     
+        <PageTransection>{children}</PageTransection>
       </body>
     </html>
   );
