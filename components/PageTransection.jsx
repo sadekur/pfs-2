@@ -1,25 +1,42 @@
 "use client";
+
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import React from "react";
 
-const PageTransection = ({ children }) => {
-  const pathname = usePathname();
-  return (
-    <AnimatePresence>
-      <div key={pathname}>
-        <motion.div
-          initial={{ opacity: 1 }}
-          animate={{
-            opacity: 0,
-            transition: { delay: 1, duration: 0.4, ease: "easeInOut" },
-          }}
-          className="w-screen h-screen fixed top-0 bg-primary pointer-events-none"
-        />
-        {children}
-      </div>
-    </AnimatePresence>
-  );
+const pageVariants = {
+  initial: {
+    opacity: 0,
+    y: 20,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+  },
+  exit: {
+    opacity: 0,
+    y: -20,
+  },
 };
 
-export default PageTransection;
+export default function PageTransection({ children }) {
+  const pathname = usePathname();
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.main
+        key={pathname}
+        variants={pageVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        transition={{
+          duration: 0.4,
+          ease: "easeInOut",
+        }}
+        className="min-h-screen"
+      >
+        {children}
+      </motion.main>
+    </AnimatePresence>
+  );
+}

@@ -18,10 +18,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={jetbrainsMono.variable}>
-      <body className="font-primary"> {/* Apply the font class here */}
+      <body className="font-primary">
         <Header />
-        <StairEffect />
-        <PageTransection>{children}</PageTransection>     
+        <PageTransection>{children}</PageTransection>
       </body>
     </html>
   );
