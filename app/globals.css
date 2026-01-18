@@ -16,8 +16,9 @@
     --secondary-foreground: 222.2 84% 4.9%;
     --muted: 210 40% 96%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 222.2 84% 4.9%;
+    --accent: 149 100% 50%; /* #00e187 in HSL */
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 149 100% 44%; /* Slightly darker #00e187 in HSL */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
     --border: 214.3 31.8% 91.4%;
@@ -38,8 +39,9 @@
     --secondary-foreground: 210 40% 98%;
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 149 100% 50%; /* #00e187 in HSL */
+    --accent-foreground: 0 0% 100%;
+    --accent-hover: 149 100% 44%; /* Slightly darker #00e187 in HSL */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
@@ -53,5 +55,14 @@
   
   body {
     @apply bg-primary text-white leading-loose font-primary;
+  }
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-bold;
+  }
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-bold;
+  }
+  .h3 {
+    @apply text-[20px] xl:text-[24px] leading-[1.1] font-bold;
   }
 }
