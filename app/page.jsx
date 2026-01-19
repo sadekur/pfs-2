@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { FileDiffIcon } from "lucide-react";
 import Social from "@/components/Social";
+import Photo from "@/components/Photo";
 
 const Home = () => {
   return (
@@ -37,7 +38,9 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div>photo</div>
+          <div>
+            <Photo />
+          </div>
         </div>
       </div>
     </section>
