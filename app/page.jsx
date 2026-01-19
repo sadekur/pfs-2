@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { FileDiffIcon } from "lucide-react";
+import Social from "@/components/Social";
 
 const Home = () => {
   return (
@@ -22,12 +23,17 @@ const Home = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="uppercase flex items-center gap-2"
+                className="uppercase flex items-center gap-2 hover:bg-accent hover:text-primary transition-all duration-300"
               >
                 <span>Download CV</span> <FileDiffIcon className="text-lg" />
               </Button>
               <div className="mb-8 xl:mb-0">
-                <div>socials</div>
+                <Social
+                  containerStyles={"flex gap-6"}
+                  iconStyles={
+                    "w-9 h-9 border border-accent rounded-full flex items-center justify-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-300"
+                  }
+                />
               </div>
             </div>
           </div>
