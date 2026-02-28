@@ -7,10 +7,10 @@ import Status from "@/components/Status";
 
 const Home = () => {
   return (
-    <section className="h-full pt-2">
+    <section className="h-full">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row justify-between items-center xl:pt:8 xl:pb-24">
-          <div className="text-center xl:text-left order-2 xl:order-none">
+        <div className="flex flex-col xl:flex-row justify-between items-center xl:pt-8 xl:pb-24">
+          <div className="pt-5 xl:pt-[150px] text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Softwere Engineer</span>
             <h1 className="h1 mb-6">
               Hello I'm <br />{" "}
@@ -39,7 +39,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+          <div className="order-1 xl:order-none pt-[100px] xl:pt-0 mb-8 xl:mb-0">
             <Photo />
           </div>
         </div>
