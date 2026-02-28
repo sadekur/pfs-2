@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FileDiffIcon } from "lucide-react";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
+import Status from "@/components/Status";
 
 const Home = () => {
   return (
@@ -43,6 +44,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Status />
     </section>
   );
 };
