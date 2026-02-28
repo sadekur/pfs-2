@@ -12,6 +12,10 @@ const status = [
     title: "Projects Completed",
   },
   {
+    num: 10,
+    title: "Technologies Mastered",
+  },
+  {
     num: 10000,
     title: "Code Commits",
   },
@@ -25,7 +29,7 @@ const Status = () => {
           {status.map((item, index) => {
             return (
               <div key={index}
-                className="flex-1 flex gap-4 items-center justify-centerxl:justify-start"
+                className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
               >
                 <CountUp
                   end={item.num}
@@ -33,7 +37,7 @@ const Status = () => {
                   delay={2}
                   className="text-4xl xl:text-6xl font-extrabold"
                 />
-                <p className={item.title.length < 15 ? "max-w-[100px]" : "max-w-[150px]"}>{item.title}</p>
+                <p className={`${item.title.length < 15 ? "max-w-[100px]" : "max-w-[150px]"} leading-snug text-white/80`}>{item.title}</p>
               </div>
             );
           })}
