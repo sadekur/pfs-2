@@ -5,18 +5,16 @@ import React from 'react'
 
 const Photo = () => {
   return (
-    <div className='w-full h-full relative rounded-full bg-gradient-to-tr from-accent to-primary overflow-hidden'>
+    <div className='w-full h-full relative '>
       <motion.div>
-        <div>
+        <div className='w-[298px] h-[298px] xl:w-[498px] xl:h-[498px]'>
           <Image
-            src="/sadekur-rahman.png"
+            src="/assets/photo.png"
             priority
             quality={100}
             fill
             alt="Sadekur Rahman"
-            // width={400}
-            // height={400}
-            className="w-[298px] h-[298px] object-cover rounded-full"
+            className="object-contain"
           />
         </div>
       </motion.div>
