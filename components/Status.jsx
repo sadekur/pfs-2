@@ -27,13 +27,13 @@ const Status = () => {
               <div key={index}
                 className="flex-1 flex gap-4 items-center justify-centerxl:justify-start"
               >
-                <p>{item.title}</p>
                 <CountUp
                   end={item.num}
                   duration={5}
                   delay={2}
                   className="text-4xl xl:text-6xl font-extrabold"
                 />
+                <p className={item.title.length < 15 ? "max-w-[100px]" : "max-w-[150px]"}>{item.title}</p>
               </div>
             );
           })}
