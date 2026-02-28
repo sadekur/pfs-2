@@ -4,7 +4,7 @@ import React from 'react'
 const Photo = () => {
   return (
     <div>
-      
+      gbdg
     </div>
   )
 }
