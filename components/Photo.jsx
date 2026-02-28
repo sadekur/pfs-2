@@ -5,35 +5,18 @@ import React from 'react'
 
 const Photo = () => {
   return (
-    <div className='w-full h-full relative'>
+    <div className='w-full h-full relative flex justify-center items-center'>
       <motion.div
-        initial={{opacity: 0}}
+        initial={{ opacity: 0 }}
         animate={{
-          opacity: 1, 
-          transition: {delay: 2, duration: 0.4, ease: 'easeIn'}
+          opacity: 1,
+          transition: { delay: 2, duration: 0.4, ease: 'easeIn' }
         }}
+        className='relative flex justify-center items-center'
       >
-        {/* Photo */}
-        <motion.div
-          initial={{opacity: 0}}
-          animate={{
-            opacity: 1, 
-            transition: {delay: 2.4, duration: 0.4, ease: 'easeOut'}
-          }}
-          className='w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute'
-       >
-          <Image
-            src="/assets/photo.png"
-            priority
-            quality={100}
-            fill
-            alt="Sadekur Rahman"
-            className="object-contain"
-          />
-        </motion.div>
-
-        {/* Circle */}
-        <motion.svg className='w-[300px] h-[300px] xl:w-[500px] xl:h-[500px]'
+        {/* Circle SVG — renders first in flow */}
+        <motion.svg
+          className='w-[300px] h-[300px] xl:w-[500px] xl:h-[500px]'
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +24,7 @@ const Photo = () => {
           <motion.circle
             cx="253"
             cy="253"
-            r="258"
+            r="250"
             stroke="#00ff99"
             strokeWidth="4"
             strokeLinecap="round"
@@ -53,8 +36,29 @@ const Photo = () => {
             }}
             transition={{ duration: 20, repeat: Infinity, repeatType: "reverse" }}
           />
-          
         </motion.svg>
+
+        {/* Photo — absolutely centered over the circle */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: 1,
+            transition: { delay: 2.4, duration: 0.4, ease: 'easeOut' }
+          }}
+          className='absolute inset-0 flex justify-center items-center'
+        >
+          <div className='w-[280px] h-[280px] xl:w-[470px] xl:h-[470px] relative mix-blend-lighten'>
+            <Image
+              src="/assets/photo.png"
+              priority
+              quality={100}
+              fill
+              alt="Sadekur Rahman"
+              className="object-contain"
+            />
+          </div>
+        </motion.div>
+
       </motion.div>
     </div>
   )
