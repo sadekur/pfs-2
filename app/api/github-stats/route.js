@@ -45,7 +45,7 @@ export async function GET() {
     );
 
     return Response.json({
-        totalCommits: contributions.contributionCalendar.totalContributions, // ✅ 2,638
+        totalCommits: contributions.contributionCalendar.totalContributions,
         totalRepos: user.repositories.totalCount,
         yearsOfExperience: yearsExp,
     });
