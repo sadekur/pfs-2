@@ -65,7 +65,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-6">
           <Nav />
           <Link href="/contact">
             <Button>Hire Me</Button>
@@ -73,7 +73,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Nav */}
-        <div className="flex md:hidden">
+        <div className="flex lg:hidden">
           <MobileNav />
         </div>
       </div>

@@ -15,21 +15,21 @@ const services = [
   },
   {
     num: "02",
-    name: "Wordpress Plugins & Development",
+    name: "Plugins Development",
     description: "Custom Wordpress plugins and theme development.",
     href: "/services/wordpress-development",
-  },
-  {
-    num: "03",
-    name: "Consulting",
-    description: "Expert consulting services for your digital needs.",
-    href: "/services/consulting",
   },
   {
     num: "04",
     name: "Frontend Development",
     description: "Modern frontend development with React/Next and other cutting-edge technologies.",
     href: "/services/frontend-development",
+  },
+  {
+    num: "03",
+    name: "Consulting",
+    description: "Expert consulting services for your digital needs.",
+    href: "/services/consulting",
   },
 ];
 
