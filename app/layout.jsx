@@ -6,7 +6,7 @@ import StairEffect from "@/components/StairEffect";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-jetbrains-mono", // Make sure this matches the variable in tailwind config
+  variable: "--font-jetbrains-mono",
   display: 'swap',
 });
 
