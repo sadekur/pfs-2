@@ -15,15 +15,21 @@ const services = [
   },
   {
     num: "02",
-    name: "App Development",
-    description: "Mobile and desktop application development.",
-    href: "/services/app-development",
+    name: "Wordpress Plugins & Development",
+    description: "Custom Wordpress plugins and theme development.",
+    href: "/services/wordpress-development",
   },
   {
     num: "03",
     name: "Consulting",
     description: "Expert consulting services for your digital needs.",
     href: "/services/consulting",
+  },
+  {
+    num: "04",
+    name: "Frontend Development",
+    description: "Modern frontend development with React/Next and other cutting-edge technologies.",
+    href: "/services/frontend-development",
   },
 ];
 
@@ -40,8 +46,8 @@ const Services = () => {
             {services.map((service, index) => {
               return (
                 <div key={index} className="flex-1 flex flex-col justify-center gap-6 group cursor-pointer ">
-                  <div>
-                    <div>{service.num}</div>
+                  <div className="w-full flex justify-between items-center">
+                    <div className="text-5xl font-extrabold text-white/70">{service.num}</div>
                     <Link href={service.href}>
                       <BsArrowDownRight />
                     </Link>
