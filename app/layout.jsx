@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
       <body className="font-primary"> {/* Apply the font class here */}
         <Header />
         <PageTransection>{children}</PageTransection>
+        <StairEffect />
       </body>
     </html>
   );
