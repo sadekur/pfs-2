@@ -47,12 +47,12 @@ const Services = () => {
               return (
                 <div key={index} className="flex-1 flex flex-col justify-center gap-6 group cursor-pointer ">
                   <div className="w-full flex justify-between items-center">
-                    <div className="text-5xl font-extrabold text-white/70">{service.num}</div>
+                    <div className="text-5xl font-extrabold text-outline text-transparent group-hover:text-outline-hover">{service.num}</div>
                     <Link href={service.href}>
                       <BsArrowDownRight />
                     </Link>
                   </div>
-                  <h2>{service.name}</h2>
+                  <h2 className="">{service.name}</h2>
                   <p>{service.description}</p>
                   <div className="border-b border-white/28 w-full"></div>
                 </div>
