@@ -6,11 +6,20 @@ import {
   FaCss3Alt,
   FaJsSquare,
   FaReact,
-  FaNodeJs,
   FaWordPress,
+  FaGitAlt,
+  FaPhp,
+  FaDatabase
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs, SiFramer } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiWebpack,
+  SiBabel,
+  SiMysql,
+  SiNpm
+} from "react-icons/si";
 
 const about = {
   title: "About Me",
@@ -113,16 +122,89 @@ const education = {
 };
 
 const skills = {
-  // icon: <FaWordPress />,
   icon: "assets/resume/skills.svg",
   title: "My Skills",
-  description: "",
-  items: [
+  description:
+    "Experienced WordPress developer with strong expertise in plugin development, REST API integration, and modern frontend technologies like React and Next.js. Skilled in building scalable and maintainable web applications.",
+
+  skillList: [
+    // Frontend
     {
+      icon: <FaHtml5 />,
       name: "HTML5",
-      icon: <FaHtml5 className="text-orange-500" />,
     },
-  ]
+    {
+      icon: <FaCss3Alt />,
+      name: "CSS3",
+    },
+    {
+      icon: <SiTailwindcss />,
+      name: "Tailwind CSS",
+    },
+    {
+      icon: <FaJsSquare />,
+      name: "JavaScript (ES6+)",
+    },
+    {
+      icon: <FaReact />,
+      name: "React.js",
+    },
+    {
+      icon: <SiNextdotjs />,
+      name: "Next.js",
+    },
+
+    // Backend
+    {
+      icon: <FaPhp />,
+      name: "PHP (OOP)",
+    },
+    {
+      icon: <FaWordPress />,
+      name: "WordPress (Theme & Plugin Dev)",
+    },
+    {
+      icon: <FaWordPress />,
+      name: "Headless WordPress",
+    },
+
+    // API & Data
+    {
+      icon: <FaJsSquare />,
+      name: "REST API",
+    },
+    {
+      icon: <FaJsSquare />,
+      name: "AJAX",
+    },
+    {
+      icon: <SiMysql />,
+      name: "MySQL",
+    },
+
+    // Tools
+    {
+      icon: <FaGitAlt />,
+      name: "Git (GitHub, Bitbucket)",
+    },
+    {
+      icon: <SiWebpack />,
+      name: "Webpack",
+    },
+    {
+      icon: <SiBabel />,
+      name: "Babel",
+    },
+    {
+      icon: <SiNpm />,
+      name: "NPM / CLI",
+    },
+    {
+      icon: <FaDatabase />,
+      name: "Database Design",
+    },
+  ],
+};
 
 const Resume = () => {
   return <div>Resume</div>;
