@@ -6,10 +6,10 @@ import {
   FaCss3Alt,
   FaJsSquare,
   FaReact,
-  FaWordPress,
+  FaWordpress,
   FaGitAlt,
   FaPhp,
-  FaDatabase
+  FaDatabase,
 } from "react-icons/fa";
 
 import {
@@ -165,11 +165,11 @@ const skills = {
       name: "PHP (OOP)",
     },
     {
-      icon: <FaWordPress />,
+      icon: <FaWordpress />,
       name: "WordPress (Theme & Plugin Dev)",
     },
     {
-      icon: <FaWordPress />,
+      icon: <FaWordpress />,
       name: "Headless WordPress",
     },
 
