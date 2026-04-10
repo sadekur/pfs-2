@@ -39,7 +39,7 @@ const about = {
     },
     {
       fieldName: "Email",
-      fieldValue: "BZM0G@example.com",
+      fieldValue: "shadekur.rahman60@gmail.com",
     },
     {
       fieldName: "Freelance",
@@ -50,6 +50,31 @@ const about = {
       fieldValue: "Bengali, English",
     },
   ],
+};
+
+const experience = {
+  icon: <FaWordPress />,
+  // icon: "assets/resume/badge.svg",
+  title: "My Experience",
+  description:
+    "I have worked on various projects, ranging from small business websites to large-scale web applications. My experience includes both frontend and backend development, allowing me to create seamless user experiences and robust server-side solutions.",
+    items: [
+      {
+        company: "Codexpert Inc.",
+        position: "Testing Engineer",
+        duration: "June 2020 - Dec 2020",
+      },
+      {
+        company: "Codexpert Inc.",
+        position: "Junior Software Engineer",
+        duration: "March 2023 - Dec 2025",
+      },
+      {
+        company: "Progressive Bytes Ltd.",
+        position: "Software Engineer",
+        duration: "Jan 2026 - Present",
+      },
+    ],
 };
 
 const Resume = () => {
