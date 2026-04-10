@@ -21,6 +21,11 @@ import {
   SiNpm
 } from "react-icons/si";
 
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@/components/ui/tooltip";
+import { ScrollArea } from "@radix-ui/react-scroll-area";
+import { motion } from "framer-motion";
+
 const about = {
   title: "About Me",
   description:
