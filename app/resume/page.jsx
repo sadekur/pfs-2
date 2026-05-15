@@ -165,8 +165,6 @@ const skills = {
       icon: <SiNextdotjs />,
       name: "Next.js",
     },
-
-    // Backend Development
     {
       icon: <FaPhp />,
       name: "PHP (OOP, Design Patterns)",
