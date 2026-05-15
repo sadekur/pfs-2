@@ -248,7 +248,7 @@ const Resume = () => {
     className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
   >
     <div className="container mx-auto pt-[60px] xl:pt-[150px]">
-      <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
+      <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px] mb-4">
         <TabsList className="flex flex-col w-full max-w-[388px] mx-auto xl:mx-0 gap-4">
           <TabsTrigger value="experience">Experience</TabsTrigger>
           <TabsTrigger value="education">Education</TabsTrigger>
@@ -346,15 +346,24 @@ const Resume = () => {
             <div className="flex flex-col gap-[30px]">
               <h3 className="text-4xl font-bold">{about.title}</h3>
               <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}</p>
-              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
-                {about.info.map((item, index) => {
-                  return (
-                    <li className="flex justify-center items-center xl:justify-start gap-4" key={index}>
-                      <span className="text-white/60">{item.fieldName}</span>
-                      <span className="text-xl">{item.fieldValue}</span>
-                    </li>
-                  );
-                })}
+              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-4 mx-auto xl:mx-0 w-full">
+                {about.info.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-center gap-3 bg-[#232329] rounded-xl px-6 py-4 min-h-[60px]"
+                  >
+                    {/* Label */}
+                    <span className="text-white/40 text-sm whitespace-nowrap w-[100px] shrink-0 text-left">
+                      {item.fieldName}
+                    </span>
+                    {/* Divider */}
+                    <span className="text-white/20 shrink-0">|</span>
+                    {/* Value */}
+                    <span className="text-white font-medium text-sm break-all text-left">
+                      {item.fieldValue}
+                    </span>
+                  </li>
+                ))}
               </ul>
             </div>
           </TabsContent>
