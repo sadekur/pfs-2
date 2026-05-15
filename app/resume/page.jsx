@@ -342,8 +342,21 @@ const Resume = () => {
             </div>
           </TabsContent>
           
-          <TabsContent value="about" className="w-full">
-            {/* About content goes here */}dsad
+          <TabsContent value="about" className="w-full text-center xl:text-left">
+            <div>
+              <h3>{about.title}</h3>
+              <p>{about.description}</p>
+              <ul>
+                {about.info.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <h3>{item.name}</h3>
+                      <p>{item.description}</p>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </TabsContent>
         </div>
       </Tabs>
