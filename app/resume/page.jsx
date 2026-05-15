@@ -293,15 +293,12 @@ const Resume = () => {
                       key={index}
                       className="bg-[#232329] py-6 px-8 rounded-xl flex flex-col justify-center items-center lg:items-start gap-2 min-h-[184px] h-auto"
                     >
-                      {/* Passing Year Badge */}
                       <span className="text-accent text-sm font-semibold tracking-wide">
                         {item.passingYear}
                       </span>
                       <h3 className="text-base font-semibold leading-snug text-center lg:text-left">
                         {item.degree}
                       </h3>
-
-                      {/* Institution */}
                       <div className="flex items-center gap-3">
                         <span className="w-[6px] h-[6px] rounded-full bg-accent flex-shrink-0" />
                         <p className="text-white/60 text-sm">{item.institution}</p>
