@@ -20,7 +20,8 @@ import {
   SiWebpack,
   SiBabel,
   SiMysql,
-  SiNpm
+  SiNpm,
+  SiMongodb
 } from "react-icons/si";
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -201,7 +202,7 @@ const skills = {
       name: "MySQL",
     },
     {
-      icon: <FaDatabase />,
+      icon: <SiMongodb />,
       name: "MongoDB",
     },
 
