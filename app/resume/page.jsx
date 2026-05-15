@@ -161,21 +161,27 @@ const skills = {
       name: "Next.js",
     },
 
-    // Backend
+    // Backend Development
     {
       icon: <FaPhp />,
-      name: "PHP (OOP)",
+      name: "PHP (OOP, Design Patterns)",
     },
     {
+      icon: <FaJsSquare />,
+      name: "Node.js (Express.js)",
+    },
+
+    // CMS
+    {
       icon: <FaWordpress />,
-      name: "WordPress (Theme & Plugin Dev)",
+      name: "WordPress (Theme & Plugin Development)",
     },
     {
       icon: <FaWordpress />,
       name: "Headless WordPress",
     },
 
-    // API & Data
+    // API & Data Handling
     {
       icon: <FaJsSquare />,
       name: "REST API",
@@ -185,15 +191,35 @@ const skills = {
       name: "AJAX",
     },
     {
+      icon: <FaJsSquare />,
+      name: "JWT Authentication",
+    },
+
+    // Database
+    {
       icon: <SiMysql />,
       name: "MySQL",
     },
+    {
+      icon: <FaDatabase />,
+      name: "MongoDB",
+    },
 
-    // Tools
+    // Version Control
     {
       icon: <FaGitAlt />,
-      name: "Git (GitHub, Bitbucket)",
+      name: "Git",
     },
+    {
+      icon: <FaGitAlt />,
+      name: "GitHub",
+    },
+    {
+      icon: <FaGitAlt />,
+      name: "Bitbucket",
+    },
+
+    // Tools
     {
       icon: <SiWebpack />,
       name: "Webpack",
@@ -204,11 +230,7 @@ const skills = {
     },
     {
       icon: <SiNpm />,
-      name: "NPM / CLI",
-    },
-    {
-      icon: <FaDatabase />,
-      name: "Database Design",
+      name: "npm / CLI",
     },
   ],
 };
