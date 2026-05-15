@@ -320,7 +320,18 @@ const Resume = () => {
               <ul className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
                 {skills.skillList.map((item, index) => {
                   return (
-                    <li key={index}>{item.name}</li>
+                    <li key={index}>
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger>
+                            <div className="text-4xl group-hover:text-accent transection-all duration-300">{item.icon}</div>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>{item.name}</p>
+                          </TooltipContent>
+                          </Tooltip>
+                      </TooltipProvider>
+                    </li>
                   );
                 })}
               </ul>
