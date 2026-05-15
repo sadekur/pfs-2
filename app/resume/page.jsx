@@ -1,8 +1,6 @@
 "use client";
 
-import { title } from "framer-motion/client";
 import React from "react";
-// ✅ Keep only THIS one combined import
 import {
   SiTailwindcss,
   SiNextdotjs,
@@ -74,7 +72,6 @@ const about = {
 };
 
 const experience = {
-  // icon: <FaWordPress />,
   icon: "assets/resume/badge.svg",
   title: "My Experience",
   description:
@@ -109,7 +106,6 @@ const experience = {
 };
 
 const education = {
-  // icon: <FaWordPress />,
   icon: "assets/resume/cap.svg",
   title: "My Education",
   description:
@@ -140,7 +136,6 @@ const skills = {
     "Experienced WordPress developer with strong expertise in plugin development, REST API integration, and modern frontend technologies like React and Next.js. Skilled in building scalable and maintainable web applications.",
 
   skillList: [
-    // Frontend
     {
       icon: <FaHtml5 />,
       name: "HTML5",
@@ -165,8 +160,6 @@ const skills = {
       icon: <SiNextdotjs />,
       name: "Next.js",
     },
-
-    // Backend Development
     {
       icon: <FaPhp />,
       name: "PHP (OOP, Design Patterns)",
@@ -175,8 +168,6 @@ const skills = {
       icon: <FaJsSquare />,
       name: "Node.js (Express.js)",
     },
-
-    // CMS
     {
       icon: <FaWordpress />,
       name: "WordPress (Theme & Plugin Development)",
@@ -185,8 +176,6 @@ const skills = {
       icon: <FaWordpress />,
       name: "Headless WordPress",
     },
-
-    // API & Data Handling
     {
       icon: <TbApi />,
       name: "REST API",
@@ -199,8 +188,6 @@ const skills = {
       icon: <SiJsonwebtokens />,
       name: "JWT Authentication",
     },
-
-    // Database
     {
       icon: <SiMysql />,
       name: "MySQL",
@@ -209,8 +196,6 @@ const skills = {
       icon: <SiMongodb />,
       name: "MongoDB",
     },
-
-    // Version Control
     {
       icon: <FaGitAlt />,
       name: "Git",
@@ -223,8 +208,6 @@ const skills = {
       icon: <SiBitbucket />,
       name: "Bitbucket",
     },
-
-    // Tools
     {
       icon: <SiWebpack />,
       name: "Webpack",
@@ -293,17 +276,12 @@ const Resume = () => {
                       key={index}
                       className="bg-[#232329] py-6 px-8 rounded-xl flex flex-col justify-center items-center lg:items-start gap-2 min-h-[184px] h-auto"
                     >
-                      {/* Passing Year Badge */}
                       <span className="text-accent text-sm font-semibold tracking-wide">
-                        {item.passingYear}  {/* ✅ was item.duration — wrong field */}
+                        {item.passingYear}
                       </span>
-
-                      {/* Degree */}
                       <h3 className="text-base font-semibold leading-snug text-center lg:text-left">
                         {item.degree}
                       </h3>
-
-                      {/* Institution */}
                       <div className="flex items-center gap-3">
                         <span className="w-[6px] h-[6px] rounded-full bg-accent flex-shrink-0" />
                         <p className="text-white/60 text-sm">{item.institution}</p>
@@ -354,13 +332,10 @@ const Resume = () => {
                     key={index}
                     className="flex items-center gap-3 bg-[#232329] rounded-xl px-6 py-4 min-h-[60px]"
                   >
-                    {/* Label */}
                     <span className="text-white/40 text-sm whitespace-nowrap w-[100px] shrink-0 text-left">
                       {item.fieldName}
                     </span>
-                    {/* Divider */}
                     <span className="text-white/20 shrink-0">|</span>
-                    {/* Value */}
                     <span className="text-white font-medium text-sm break-all text-left">
                       {item.fieldValue}
                     </span>
