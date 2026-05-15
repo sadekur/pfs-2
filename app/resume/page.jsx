@@ -190,11 +190,11 @@ const skills = {
 
     // API & Data Handling
     {
-      icon: <FaJsSquare />,
+      icon: <TbApi />,
       name: "REST API",
     },
     {
-      icon: <FaJsSquare />,
+      icon: <TbApi />,
       name: "AJAX",
     },
     {
