@@ -336,7 +336,6 @@ const Resume = () => {
                       {item.fieldName}
                     </span>
                     <span className="text-white/20 shrink-0">|</span>
-                    {/* Value */}
                     <span className="text-white font-medium text-sm break-all text-left">
                       {item.fieldValue}
                     </span>
