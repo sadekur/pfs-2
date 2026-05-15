@@ -198,7 +198,7 @@ const skills = {
       name: "AJAX",
     },
     {
-      icon: <FaJsSquare />,
+      icon: <SiJsonwebtokens />,
       name: "JWT Authentication",
     },
 
