@@ -222,7 +222,7 @@ const Resume = () => {
   >
     <div className="container mx-auto pt-[60px] xl:pt-[150px]">
       <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
-        <TabsList className="flex flex-col w-full max-w-[388px] max-auto xl:max-0 gap-6">
+        <TabsList className="flex flex-col w-full max-w-[388px] max-auto xl:max-0 gap-4">
           <TabsTrigger value="experience">Experience</TabsTrigger>
           <TabsTrigger value="education">Education</TabsTrigger>
           <TabsTrigger value="skills">Skills</TabsTrigger>
