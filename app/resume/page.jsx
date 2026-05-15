@@ -321,11 +321,11 @@ const Resume = () => {
                 <h3 className="text-4xl font-bold">{skills.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 ">{skills.description}</p>
               </div>
-              <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-[30px]">
+              <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px]">
                 {skills.skillList.map((item, index) => {
                   return (
                     <li key={index}>
-                      <TooltipProvider>
+                      <TooltipProvider delayDuration={100}>
                         <Tooltip>
                           <TooltipTrigger>
                             <div className="text-4xl group-hover:text-accent transection-all duration-300">{item.icon}</div>
