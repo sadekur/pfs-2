@@ -185,8 +185,6 @@ const skills = {
       icon: <FaWordpress />,
       name: "Headless WordPress",
     },
-
-    // API & Data Handling
     {
       icon: <TbApi />,
       name: "REST API",
@@ -199,8 +197,6 @@ const skills = {
       icon: <SiJsonwebtokens />,
       name: "JWT Authentication",
     },
-
-    // Database
     {
       icon: <SiMysql />,
       name: "MySQL",
