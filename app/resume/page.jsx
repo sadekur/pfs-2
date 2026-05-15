@@ -331,7 +331,7 @@ const Resume = () => {
                             <div className="text-4xl group-hover:text-accent transection-all duration-300">{item.icon}</div>
                           </TooltipTrigger>
                           <TooltipContent>
-                            <p>{item.name}</p>
+                            <p className="capetialize">{item.name}</p>
                           </TooltipContent>
                           </Tooltip>
                       </TooltipProvider>
