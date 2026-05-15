@@ -2,8 +2,7 @@
 
 import { title } from "framer-motion/client";
 import React from "react";
-import { SiAxios } from "react-icons/si"; // not ideal, use below instead
-
+// ✅ Keep only THIS one combined import
 import {
   SiTailwindcss,
   SiNextdotjs,
@@ -18,17 +17,16 @@ import {
   SiJsonwebtokens,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
-
-
 import {
-  SiTailwindcss,
-  SiNextdotjs,
-  SiWebpack,
-  SiBabel,
-  SiMysql,
-  SiNpm,
-  SiMongodb
-} from "react-icons/si";
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaWordpress,
+  FaGitAlt,
+  FaPhp,
+  FaDatabase,
+} from "react-icons/fa";
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@/components/ui/tooltip";
