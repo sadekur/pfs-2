@@ -223,8 +223,6 @@ const skills = {
       icon: <SiBitbucket />,
       name: "Bitbucket",
     },
-
-    // Tools
     {
       icon: <SiWebpack />,
       name: "Webpack",
