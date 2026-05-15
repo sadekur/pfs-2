@@ -242,11 +242,11 @@ const skills = {
 
 const Resume = () => {
   return (
-    <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }}
-    className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
-  >
+    // <motion.div
+    //   initial={{ opacity: 0 }}
+    //   animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }}
+    //   className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
+    // >
     <div className="container mx-auto pt-[60px] xl:pt-[150px]">
       <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
         <TabsList className="flex flex-col w-full max-w-[388px] mx-auto xl:mx-0 gap-4">
@@ -348,7 +348,7 @@ const Resume = () => {
         </div>
       </Tabs>
     </div>
-    </motion.div>
+    // </motion.div>
   )
 };
 
