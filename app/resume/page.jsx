@@ -332,7 +332,6 @@ const Resume = () => {
                     key={index}
                     className="flex items-center gap-3 bg-[#232329] rounded-xl px-6 py-4 min-h-[60px]"
                   >
-                    {/* Label */}
                     <span className="text-white/40 text-sm whitespace-nowrap w-[100px] shrink-0 text-left">
                       {item.fieldName}
                     </span>
