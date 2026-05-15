@@ -2,17 +2,23 @@
 
 import { title } from "framer-motion/client";
 import React from "react";
+import { SiAxios } from "react-icons/si"; // not ideal, use below instead
 
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJsSquare,
-  FaReact,
-  FaWordpress,
-  FaGitAlt,
-  FaPhp,
-  FaDatabase,
-} from "react-icons/fa";
+  SiTailwindcss,
+  SiNextdotjs,
+  SiWebpack,
+  SiBabel,
+  SiMysql,
+  SiNpm,
+  SiMongodb,
+  SiBitbucket,  // ✅ add this
+  SiGithub,     // ✅ add this
+  SiPostman,    // ✅ for REST API (best match)
+  SiJsonwebtokens,
+} from "react-icons/si";
+import { TbApi } from "react-icons/tb";
+
 
 import {
   SiTailwindcss,
