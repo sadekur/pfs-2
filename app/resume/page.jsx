@@ -221,8 +221,8 @@ const Resume = () => {
     className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
   >
     <div className="container mx-auto pt-[60px] xl:pt-[150px]">
-      <Tabs defaultValue="experience" className="flex flex-col w-full max-w-[388px] max-auto xl:max-0 gap-6">
-        <TabsList className="flex flex-col xl:flex-col">
+      <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
+        <TabsList className="flex flex-col w-full max-w-[388px] max-auto xl:max-0 gap-6">
           <TabsTrigger value="experience">Experience</TabsTrigger>
           <TabsTrigger value="education">Education</TabsTrigger>
           <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -231,19 +231,19 @@ const Resume = () => {
         <div className="min-h-[78vh] w-full">
         
           <TabsContent value="experience" className="w-full">
-            {/* Experience content goes here */}
+            {/* Experience content goes here */}ds
           </TabsContent>
           
           <TabsContent value="education" className="w-full">
-            {/* Education content goes here */}
+            {/* Education content goes here */}da
           </TabsContent>
           
           <TabsContent value="skills" className="w-full">
-            {/* Skills content goes here */}
+            {/* Skills content goes here */}sdd
           </TabsContent>
           
           <TabsContent value="about" className="w-full">
-            {/* About content goes here */}
+            {/* About content goes here */}dsad
           </TabsContent>
         </div>
       </Tabs>
