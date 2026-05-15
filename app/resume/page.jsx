@@ -218,11 +218,11 @@ const skills = {
       name: "Git",
     },
     {
-      icon: <FaGitAlt />,
+      icon: <SiGithub />,
       name: "GitHub",
     },
     {
-      icon: <FaGitAlt />,
+      icon: <SiBitbucket />,
       name: "Bitbucket",
     },
 
