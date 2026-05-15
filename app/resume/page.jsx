@@ -297,8 +297,6 @@ const Resume = () => {
                       <span className="text-accent text-sm font-semibold tracking-wide">
                         {item.passingYear}
                       </span>
-
-                      {/* Degree */}
                       <h3 className="text-base font-semibold leading-snug text-center lg:text-left">
                         {item.degree}
                       </h3>
