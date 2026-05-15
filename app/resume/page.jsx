@@ -83,17 +83,17 @@ const experience = {
       {
         company: "Codexpert Inc.",
         position: "Testing Engineer",
-        duration: "June 2020 - Dec 2020",
+        duration: "Jan 2020 - August 2020",
       },
       {
         company: "Local Gov. Engineering Division (LGED)",
         position: "Computer Executive",
-        duration: "Dec 2020 - Feb 2023",
+        duration: "Aug 2020 - Feb 2023",
       },
       {
         company: "Codexpert Inc.",
         position: "Junior Software Engineer",
-        duration: "March 2023 - Dec 2025",
+        duration: "Mar 2023 - Dec 2025",
       },
       {
         company: "Progressive Bytes Ltd.",
