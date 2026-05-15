@@ -209,8 +209,6 @@ const skills = {
       icon: <SiMongodb />,
       name: "MongoDB",
     },
-
-    // Version Control
     {
       icon: <FaGitAlt />,
       name: "Git",
