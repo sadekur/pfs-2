@@ -245,7 +245,7 @@ const Resume = () => {
   >
     <div className="container mx-auto pt-[60px] xl:pt-[150px]">
       <Tabs defaultValue="experience" className="flex flex-col xl:flex-row gap-[60px]">
-        <TabsList className="flex flex-col w-full max-w-[388px] max-auto xl:max-0 gap-4">
+        <TabsList className="flex flex-col w-full max-w-[388px] mx-auto xl:mx-0 gap-4">
           <TabsTrigger value="experience">Experience</TabsTrigger>
           <TabsTrigger value="education">Education</TabsTrigger>
           <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -262,7 +262,7 @@ const Resume = () => {
               <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                 {experience.items.map((item, index) => {
                   return (
-                    <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center iteams-center lg:items-start gap-1">
+                    <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                       <span className="text-accent">{item.duration}</span>
                       <h3 className="text-xl max-w-[268px] min-h-[60px] text-center lg:text-left">{item.position}</h3>
                       <div className="flex items-center gap-3 ">
