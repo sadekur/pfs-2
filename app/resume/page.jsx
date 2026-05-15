@@ -335,7 +335,6 @@ const Resume = () => {
                     <span className="text-white/40 text-sm whitespace-nowrap w-[100px] shrink-0 text-left">
                       {item.fieldName}
                     </span>
-                    {/* Divider */}
                     <span className="text-white/20 shrink-0">|</span>
                     {/* Value */}
                     <span className="text-white font-medium text-sm break-all text-left">
