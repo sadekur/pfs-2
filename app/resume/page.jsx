@@ -74,7 +74,6 @@ const about = {
 };
 
 const experience = {
-  // icon: <FaWordPress />,
   icon: "assets/resume/badge.svg",
   title: "My Experience",
   description:
