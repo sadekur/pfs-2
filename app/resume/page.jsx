@@ -175,8 +175,6 @@ const skills = {
       icon: <FaJsSquare />,
       name: "Node.js (Express.js)",
     },
-
-    // CMS
     {
       icon: <FaWordpress />,
       name: "WordPress (Theme & Plugin Development)",
