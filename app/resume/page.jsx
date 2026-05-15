@@ -321,24 +321,26 @@ const Resume = () => {
                 <h3 className="text-4xl font-bold">{skills.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 ">{skills.description}</p>
               </div>
-              <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                {skills.skillList.map((item, index) => {
-                  return (
-                    <li key={index}>
-                      <TooltipProvider delayDuration={100}>
-                        <Tooltip>
-                          <TooltipTrigger className="w-full h-[150px] flex items-center justify-center bg-[#232329] rounded-xl group">
-                            <div className="text-4xl group-hover:text-accent transection-all duration-300">{item.icon}</div>
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p className="capetialize">{item.name}</p>
-                          </TooltipContent>
-                          </Tooltip>
-                      </TooltipProvider>
-                    </li>
-                  );
-                })}
-              </ul>
+              <ScrollArea className="h-[500px]">
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                  {skills.skillList.map((item, index) => {
+                    return (
+                      <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[150px] flex items-center justify-center bg-[#232329] rounded-xl group">
+                              <div className="text-4xl group-hover:text-accent transection-all duration-300">{item.icon}</div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p className="capetialize">{item.name}</p>
+                            </TooltipContent>
+                            </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </ScrollArea>
             </div>
           </TabsContent>
           
