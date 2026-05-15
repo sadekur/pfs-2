@@ -12,9 +12,9 @@ import {
   SiMysql,
   SiNpm,
   SiMongodb,
-  SiBitbucket,  // ✅ add this
-  SiGithub,     // ✅ add this
-  SiPostman,    // ✅ for REST API (best match)
+  SiBitbucket,
+  SiGithub,
+  SiPostman,
   SiJsonwebtokens,
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
