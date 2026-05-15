@@ -350,8 +350,8 @@ const Resume = () => {
                 {about.info.map((item, index) => {
                   return (
                     <li className="flex justify-center items-center xl:justify-start gap-4" key={index}>
-                      <span>{item.fieldName}</span>
-                      <span>{item.fieldValue}</span>
+                      <span className="text-white/60">{item.fieldName}</span>
+                      <span className="text-xl">{item.fieldValue}</span>
                     </li>
                   );
                 })}
