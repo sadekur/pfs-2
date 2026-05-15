@@ -295,7 +295,7 @@ const Resume = () => {
                     >
                       {/* Passing Year Badge */}
                       <span className="text-accent text-sm font-semibold tracking-wide">
-                        {item.passingYear}  {/* ✅ was item.duration — wrong field */}
+                        {item.passingYear}
                       </span>
 
                       {/* Degree */}
