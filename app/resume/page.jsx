@@ -1,8 +1,6 @@
 "use client";
 
-import { title } from "framer-motion/client";
 import React from "react";
-// ✅ Keep only THIS one combined import
 import {
   SiTailwindcss,
   SiNextdotjs,
