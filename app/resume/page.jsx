@@ -109,7 +109,6 @@ const experience = {
 };
 
 const education = {
-  // icon: <FaWordPress />,
   icon: "assets/resume/cap.svg",
   title: "My Education",
   description:
