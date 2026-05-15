@@ -235,6 +235,19 @@ const Resume = () => {
               <h3 className="text-4xl font-bold">{experience.title}</h3>
               <p className="text-white/60 max-w-[600px] mx-auto xl:mx-0">{experience.description}</p>
             </div>
+            <ScrollArea className="h-[400px]">
+              <ul>
+                {experience.items.map((item, index) => {
+                  return (
+                    <li key={index} className="text-white/60">
+                      <h4 className="text-xl font-bold">{item.position}</h4>
+                      <p className="text-lg">{item.company}</p>
+                      <p className="text-md">{item.duration}</p>
+                    </li>
+                  )
+                })}
+              </ul>
+            </ScrollArea>
           </TabsContent>
           
           <TabsContent value="education" className="w-full">
