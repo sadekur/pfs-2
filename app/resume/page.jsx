@@ -140,7 +140,6 @@ const skills = {
     "Experienced WordPress developer with strong expertise in plugin development, REST API integration, and modern frontend technologies like React and Next.js. Skilled in building scalable and maintainable web applications.",
 
   skillList: [
-    // Frontend
     {
       icon: <FaHtml5 />,
       name: "HTML5",
