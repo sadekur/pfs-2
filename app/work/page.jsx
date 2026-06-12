@@ -49,8 +49,12 @@ const Work = () => {
     animate={{ opacity: 1 }}
     className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
   >
-    <div>
-      Work
+    <div className="container mx-auto pt-[60px] xl:pt-[150px]">
+      <div className="flex flex-col lg:flex-row xl:gap-[30px]">
+        <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+          <div className=""></div>
+        </div>
+      </div>
     </div>
     </motion.div>
   )
