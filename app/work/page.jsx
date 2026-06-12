@@ -58,7 +58,16 @@ const Work = () => {
           <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
             {project.category} Project
           </h2>
-          
+          <p className="text-white/60">
+            {project.description}
+            <ul className="">
+              {project.stack.map((item, index) => (
+                <li key={index} className="text-sm text-white/60">
+                  {item.name}
+                </li>
+              ))}
+            </ul>
+          </p>
         </div>
       </div>
     </div>
