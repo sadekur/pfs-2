@@ -65,12 +65,14 @@ const Work = () => {
                 return (
                   <li key={index} className="text-xl text-accent">
                     {item.name}
+                    {index !== project.stack.length - 1 && ','}
                   </li>
                 );
               })}
             </ul>
           </p>
         </div>
+        <div className="w-full xl:w-[50%]">slider</div>
       </div>
     </div>
     </motion.div>
