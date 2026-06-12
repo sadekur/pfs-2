@@ -19,6 +19,16 @@ const projects = [
     github: 'https://github.com',
     live: 'https://example.com',
   },
+  {
+    num: '02',
+    category: 'Frontend',
+    title: 'Project Two',
+    description: 'Description of Project Two',
+    stack: [{name: "Next.js"}, {name: "Tailwind CSS"}, {name: "Node.js"}],
+    image: 'assets/work/thumb2.png',
+    github: 'https://github.com',
+    live: 'https://example.com',
+  },
 ]
 const Work = () => {
   const [count, setCount] = useState(0);
