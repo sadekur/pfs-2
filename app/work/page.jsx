@@ -73,7 +73,7 @@ const Work = () => {
               })}
             </ul>
             <div className="border border-white/28"></div>
-            <div>
+            <div className="flex items-center gap-4">
               <Link href={project.live} target="_blank" className="flex items-center gap-2 text-white/60 hover:text-white transition-all duration-500">
                 <TooltipProvider delayDuration={100}>
                   <Tooltip>
