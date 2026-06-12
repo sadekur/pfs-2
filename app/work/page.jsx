@@ -41,7 +41,7 @@ const projects = [
   },
 ]
 const Work = () => {
-  const [count, setCount] = useState(projects[0]);
+  const [project, setProject] = useState(projects[0]);
 
   return (
     <motion.div
@@ -52,7 +52,9 @@ const Work = () => {
     <div className="container mx-auto pt-[60px] xl:pt-[150px]">
       <div className="flex flex-col lg:flex-row xl:gap-[30px]">
         <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-          <div className="text-8xl leading-none font-extrabold text-transparent text-outline"></div>
+          <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+            {project.num}
+          </div>
         </div>
       </div>
     </div>
