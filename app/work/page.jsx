@@ -111,7 +111,7 @@ const Work = () => {
             {projects.map((item, index) => {
               return (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group felx items-center justify-center bg-pink/50">
+                  <div className="h-[460px] relative group felx items-center justify-center bg-pink-50">
                   </div>
                 </SwiperSlide>
               );
