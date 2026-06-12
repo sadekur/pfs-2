@@ -70,6 +70,7 @@ const Work = () => {
                 );
               })}
             </ul>
+            <div className="border border-white/28"></div>
           </p>
         </div>
         <div className="w-full xl:w-[50%]">slider</div>
