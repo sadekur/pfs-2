@@ -44,9 +44,15 @@ const Work = () => {
   const [count, setCount] = useState(projects[0]);
 
   return (
+    <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }}
+    className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
+  >
     <div>
       Work
     </div>
+    </motion.div>
   )
 }
 
