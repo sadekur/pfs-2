@@ -73,6 +73,20 @@ const Work = () => {
               })}
             </ul>
             <div className="border border-white/28"></div>
+            <div>
+              <Link href={project.github} target="_blank" className="flex items-center gap-2 text-white/60 hover:text-white transition-all duration-500">
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <BsArrowRight />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      Live Project
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </Link>
+            </div>
           </div>
         </div>
         <div className="w-full xl:w-[50%]">slider</div>
