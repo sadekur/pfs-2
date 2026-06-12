@@ -101,7 +101,17 @@ const Work = () => {
             </div>
           </div>
         </div>
-        <div className="w-full xl:w-[50%]">slider</div>
+        <div className="w-full xl:w-[50%]">
+          <Swiper>
+            {projects.map((item, index) => {
+              return (
+                <SwiperSlide key={index} onClick={() => setProject(item)}>
+                  <Image src={item.image} alt={item.title} width={600} height={400} className="rounded-lg object-cover cursor-pointer" />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
       </div>
     </div>
     </motion.div>
