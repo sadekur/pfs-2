@@ -1,6 +1,10 @@
 "use client";
 import {motion} from 'framer-motion';
 import React, { useState } from 'react'
+import {swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/css';
+import {BsArrowRight, BsGithub} from 'react-icons/bs';
+
 
 const Work = () => {
   const [count, setCount] = useState(0);
