@@ -110,8 +110,9 @@ const Work = () => {
           <Swiper spaceBetween={30} slidesPerView={1} loop={true} className="xl:h-[520px] mb-12" onSlideChange={handleSlideChange}>
             {projects.map((item, index) => {
               return (
-                <SwiperSlide key={index} onClick={() => setProject(item)}>
-                  <Image src={item.image} alt={item.title} width={600} height={400} className="rounded-lg object-cover cursor-pointer" />
+                <SwiperSlide key={index} className="w-full">
+                  <div className="h-[460px] relative group felx items-center justify-center bg-pink/50">
+                  </div>
                 </SwiperSlide>
               );
             })}
