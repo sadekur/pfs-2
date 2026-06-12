@@ -51,27 +51,29 @@ const Work = () => {
   >
     <div className="container mx-auto pt-[60px] xl:pt-[150px]">
       <div className="flex flex-col lg:flex-row xl:gap-[30px]">
-        <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
-          <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
-            {project.num}
+        <div>
+          <div className="w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+            <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
+              {project.num}
+            </div>
+            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+              {project.category} Project
+            </h2>
+            <p className="text-white/60">
+              {project.description}
+            </p>
+            <ul className="flex gap-4">
+              {project.stack.map((item, index) => {
+                return (
+                  <li key={index} className="text-xl text-accent">
+                    {item.name}
+                    {index !== project.stack.length - 1 && ','}
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="border border-white/28"></div>
           </div>
-          <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-            {project.category} Project
-          </h2>
-          <p className="text-white/60">
-            {project.description}
-          </p>
-          <ul className="flex gap-4">
-            {project.stack.map((item, index) => {
-              return (
-                <li key={index} className="text-xl text-accent">
-                  {item.name}
-                  {index !== project.stack.length - 1 && ','}
-                </li>
-              );
-            })}
-          </ul>
-          <div className="border border-white/28"></div>
         </div>
         <div className="w-full xl:w-[50%]">slider</div>
       </div>
