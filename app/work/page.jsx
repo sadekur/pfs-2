@@ -55,6 +55,10 @@ const Work = () => {
           <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
             {project.num}
           </div>
+          <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+            {project.category} Project
+          </h2>
+          
         </div>
       </div>
     </div>
