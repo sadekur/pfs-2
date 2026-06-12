@@ -51,7 +51,7 @@ const Work = () => {
   return (
     <motion.div
     initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
+    animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, esease: "easeIn" } }}
     className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
   >
     <div className="container mx-auto pt-[60px] xl:pt-[150px]">
@@ -111,7 +111,11 @@ const Work = () => {
             {projects.map((item, index) => {
               return (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group felx items-center justify-center bg-pink-50">
+                  <div className="h-[460px] relative group felx items-center justify-center bg-pink-50/20">
+                  <div></div>
+                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                    <Image src={item.image} alt={item.title} width={600} height={400} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
+                  </div>
                   </div>
                 </SwiperSlide>
               );
