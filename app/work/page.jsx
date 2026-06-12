@@ -112,9 +112,9 @@ const Work = () => {
               return (
                 <SwiperSlide key={index} className="w-full">
                   <div className="h-[460px] relative group felx items-center justify-center bg-pink-50/20">
-                  <div></div>
-                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                    <Image src={item.image} alt={item.title} width={600} height={400} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500" />
+                  <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                  <div className="relative w-full">
+                    <Image src={item.image} alt={item.title} width={600} height={400} className="object-cover" />
                   </div>
                   </div>
                 </SwiperSlide>
