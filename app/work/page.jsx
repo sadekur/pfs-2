@@ -1,7 +1,7 @@
 "use client";
 import {motion} from 'framer-motion';
 import React, { useState } from 'react'
-import {swiper, SwiperSlide} from 'swiper/react';
+import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import {BsArrowRight, BsGithub} from 'react-icons/bs';
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@/components/ui/tooltip";
@@ -15,7 +15,7 @@ const projects = [
     title: 'Project One',
     description: 'Description of Project One',
     stack: [{name: "Html 5"}, {name: "Css 3"}, {name: "JavaScript"}],
-    image: 'assets/work/thumb1.png',
+    image: '/assets/work/thumb1.png',
     github: 'https://github.com',
     live: 'https://example.com',
   },
@@ -25,7 +25,7 @@ const projects = [
     title: 'Project Two',
     description: 'Description of Project Two',
     stack: [{name: "Next.js"}, {name: "Tailwind CSS"}, {name: "Node.js"}],
-    image: 'assets/work/thumb2.png',
+    image: '/assets/work/thumb2.png',
     github: 'https://github.com',
     live: 'https://example.com',
   },
@@ -35,7 +35,7 @@ const projects = [
     title: 'Project Three',
     description: 'Description of Project Three',
     stack: [{name: "Php"}, {name: "Wordpress"}, {name: "MySQL"}],
-    image: 'assets/work/thumb3.png',
+    image: '/assets/work/thumb3.png',
     github: 'https://github.com',
     live: 'https://example.com',
   },
@@ -61,11 +61,13 @@ const Work = () => {
           <p className="text-white/60">
             {project.description}
             <ul className="">
-              {project.stack.map((item, index) => (
-                <li key={index} className="text-sm text-white/60">
-                  {item.name}
-                </li>
-              ))}
+              {project.stack.map((item, index) => {
+                return (
+                  <li key={index} className="text-sm text-white/60">
+                    {item.name}
+                  </li>
+                );
+              })}
             </ul>
           </p>
         </div>
