@@ -81,7 +81,19 @@ const Work = () => {
                       <BsArrowRight className="text-white text-3xl group-hover:text-accent" />
                     </TooltipTrigger>
                     <TooltipContent>
-                      Live Project
+                      <p>Live Project</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              </Link>
+              <Link href={project.github} target="_blank" className="flex items-center gap-2 text-white/60 hover:text-white transition-all duration-500">
+                <TooltipProvider delayDuration={100}>
+                  <Tooltip>
+                    <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                      <BsGithub className="text-white text-3xl group-hover:text-accent" />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Github Repository</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
