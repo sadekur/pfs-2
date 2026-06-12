@@ -31,7 +31,7 @@ const projects = [
   },
   {
     num: '03',
-    category: 'Frontend',
+    category: 'Backend',
     title: 'Project Three',
     description: 'Description of Project Three',
     stack: [{name: "Php"}, {name: "Wordpress"}, {name: "MySQL"}],
