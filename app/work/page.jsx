@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import {swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import {BsArrowRight, BsGithub} from 'react-icons/bs';
-
+import {tooltip} from '@components/ui/tooltip';
 
 const Work = () => {
   const [count, setCount] = useState(0);
