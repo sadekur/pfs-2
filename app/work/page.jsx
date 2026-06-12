@@ -5,6 +5,8 @@ import {swiper, SwiperSlide} from 'swiper/react';
 import 'swiper/css';
 import {BsArrowRight, BsGithub} from 'react-icons/bs';
 import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from '@components/ui/tooltip';
+import Link from 'next/link';
+import Image from 'next/image';
 
 const Work = () => {
   const [count, setCount] = useState(0);
