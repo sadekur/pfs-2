@@ -37,7 +37,6 @@ const Photo = () => {
           />
         </motion.svg>
 
-        {/* Photo — absolutely centered over the circle */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
