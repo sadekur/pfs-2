@@ -107,8 +107,8 @@ const Work = () => {
             </div>
           </div>
         </div>
-        <div className="w-full xl:w-[50%]">
-          <Swiper spaceBetween={30} slidesPerView={1} loop={true} className="xl:h-[520px] mb-12" onSlideChange={handleSlideChange}>
+        <div className="w-full lg:w-[50%]">
+          <Swiper spaceBetween={30} slidesPerView={1} loop={true} className="lg:h-[520px] mb-12" onSlideChange={handleSlideChange}>
             {projects.map((item, index) => {
               return (
                 <SwiperSlide key={index} className="w-full">
