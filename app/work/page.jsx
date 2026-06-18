@@ -120,6 +120,7 @@ const Work = () => {
                 </SwiperSlide>
               );
             })}
+            <WorkSliderButton />
           </Swiper>
         </div>
       </div>
