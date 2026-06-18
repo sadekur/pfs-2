@@ -7,6 +7,7 @@ import {BsArrowRight, BsGithub} from 'react-icons/bs';
 import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from "@/components/ui/tooltip";
 import Link from 'next/link';
 import Image from 'next/image';
+import WorkSliderButton from '@/components/WorkSliderButton';
 
 const projects = [
   {
