@@ -1,9 +1,11 @@
 "use client";
 import React from "react";
+import { useSwiper } from "swiper/react";
 import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
 
 const WorkSliderButton = () => {
+    const swiper = useSwiper();
     return (
         <motion.div
             initial={{ opacity: 0 }}
