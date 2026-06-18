@@ -47,8 +47,6 @@ const Stairs = () => {
             delay: reverseIndex(index) * 0.1
           }}
           className="w-full h-full bg-white relative"
-          // For Blur
-        //   className="w-full h-full absolute top-0 left-0"
         />
       ))}
     </>

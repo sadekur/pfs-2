@@ -14,7 +14,7 @@ const Photo = () => {
         }}
         className='relative flex justify-center items-center'
       >
-        {/* Circle SVG — renders first in flow */}
+        {/* Animated ring SVG */}
         <motion.svg
           className='w-[300px] h-[300px] xl:w-[500px] xl:h-[500px]'
           fill="transparent"
@@ -38,23 +38,23 @@ const Photo = () => {
           />
         </motion.svg>
 
-        {/* Photo — absolutely centered over the circle */}
+        {/* Photo — absolutely centered over the ring, no negative margins */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: 'easeOut' }
+            transition: { delay: 2.0, duration: 0.4, ease: 'easeOut' }
           }}
-          className='absolute inset-0 flex justify-center items-center'
+          className='absolute inset-0 flex justify-center items-center overflow-hidden rounded-full'
         >
-          <div className='w-[280px] h-[280px] xl:w-[470px] xl:h-[470px] relative mix-blend-lighten'>
+          <div className='w-[280px] h-[280px] mt-[-50px] xl:w-[470px] xl:h-[550px] relative mix-blend-lighten'>
             <Image
               src="/assets/photo.png"
               priority
               quality={100}
               fill
               alt="Sadekur Rahman"
-              className="object-contain"
+              className="object-cover object-top"
             />
           </div>
         </motion.div>
