@@ -9,10 +9,10 @@ const WorkSliderButton = ({ containerStyles, btnStyles, iconsStyles }) => {
     const swiper = useSwiper();
     return (
         <div classname={containerStyles}>
-            <button className={btnStyles} onClick={() => swiper.slidePrev()}>
+            <button className={btnStyles}>
                 <PiCaretLeftBold className={iconsStyles} />
             </button>
-            <button className={btnStyles} onClick={() => swiper.slideNext()}>
+            <button className={btnStyles}>
                 <PiCaretRightBold className={iconsStyles} />
             </button>
         </div>
