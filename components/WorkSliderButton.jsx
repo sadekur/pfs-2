@@ -8,7 +8,7 @@ import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
 const WorkSliderButton = ({ containerStyles, btnStyles, iconsStyles }) => {
     const swiper = useSwiper();
     return (
-        <div classname={containerStyles}>
+        <div className={containerStyles}>
             <button className={btnStyles} onClick={() => swiper.slidePrev()}>
                 <PiCaretLeftBold className={iconsStyles} />
             </button>
