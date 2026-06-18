@@ -3,6 +3,7 @@ import React from "react";
 import { useSwiper } from "swiper/react";
 import { motion } from "framer-motion";
 import { BsArrowRight } from "react-icons/bs";
+import { PiArrowLeftBold } from "react-icons/pi";
 
 const WorkSliderButton = () => {
     const swiper = useSwiper();
