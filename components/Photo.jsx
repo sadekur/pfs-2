@@ -41,11 +41,11 @@ const Photo = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: 'easeOut' }
+            transition: { delay: 2.0, duration: 0.4, ease: 'easeOut' }
           }}
           className='absolute inset-0 flex justify-center items-center'
         >
-          <div className='w-[280px] h-[280px] xl:w-[470px] xl:h-[470px] relative mix-blend-lighten'>
+          <div className='w-[280px] h-[280px] mt-[-90px] xl:w-[470px] xl:h-[470px] relative mix-blend-lighten'>
             <Image
               src="/assets/photo.png"
               priority
