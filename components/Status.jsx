@@ -18,7 +18,6 @@ const Status = () => {
 
   const stats = [
     {
-    //   num: githubData?.yearsOfExperience ?? 4,
       num: 4,
       title: "Years of Experience",
     },
