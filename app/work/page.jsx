@@ -107,21 +107,18 @@ const Work = () => {
             </div>
           </div>
         </div>
-        <div className="w-full lg:w-[50%]">
+        <div className="w-full lg:w-[50%] overflow-hidden">
           <Swiper spaceBetween={30} slidesPerView={1} loop={true} className="lg:h-[520px] mb-12" onSlideChange={handleSlideChange}>
             {projects.map((item, index) => {
               return (
                 <SwiperSlide key={index} className="w-full">
-                  <div className="h-[460px] relative group felx items-center justify-center bg-pink-50/20">
-                  <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                  <div className="relative w-full">
-                    <Image src={item.image} alt={item.title} width={600} height={400} className="object-cover" />
-                  </div>
+                  <div className="h-[460px] relative overflow-hidden">
+                    <Image src={item.image} alt={item.title} fill className="object-cover" />
                   </div>
                 </SwiperSlide>
               );
             })}
-            <WorkSliderButton containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_25px)] xl:bottom-0 z-50 w-full justify-between xl:w-max xl:justify-none" btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex items-center justify-center transition-all duration-500" iconsStyles="text-2xl text-white" />
+            <WorkSliderButton containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_25px)] lg:bottom-0 z-50 w-full justify-between lg:w-max lg:justify-none" btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex items-center justify-center transition-all duration-500" iconsStyles="text-2xl text-white" />
           </Swiper>
         </div>
       </div>
