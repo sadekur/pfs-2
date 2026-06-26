@@ -43,7 +43,20 @@ const Contact = () => {
               <Input type="lastname" placeholder="Last Name" />
               <Input type="email" placeholder="Email" />
               <Input type="phone" placeholder="Phone" />
-              <Input type="subject" placeholder="Subject" />
+              <Select>
+                <SelectTrigger className="w-full">
+                  <SelectValue placeholder="Select a service" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Services</SelectLabel>
+                    <SelectItem value="service1">Modern Wordpress Plugin Development</SelectItem>
+                    <SelectItem value="service2">Mern Stack Development</SelectItem>
+                    <SelectItem value="service3">SASS Development</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+              <Textarea placeholder="Message" />
             </div>
             <Button type="submit">Send Message</Button>
           </form>
