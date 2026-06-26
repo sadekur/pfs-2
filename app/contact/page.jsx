@@ -43,6 +43,8 @@ const Contact = () => {
               <Input type="lastname" placeholder="Last Name" />
               <Input type="email" placeholder="Email" />
               <Input type="phone" placeholder="Phone" />
+            </div>
+            <div className="w-full">
               <Select>
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
@@ -56,8 +58,8 @@ const Contact = () => {
                   </SelectGroup>
                 </SelectContent>
               </Select>
-              <Textarea className="h-[200px]" placeholder="type Your Message Here " />
             </div>
+            <Textarea className="h-[200px] w-full" placeholder="type Your Message Here " />
             <Button type="submit">Send Message</Button>
           </form>
         </div>
