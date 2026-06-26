@@ -53,15 +53,6 @@ const Contact = () => {
           <p className="text-gray-600 mb-8">
             Here are some ways you can reach out to me.
           </p>
-          {contactInfo.map((info, index) => (
-            <div key={index} className="flex items-start mb-6">
-              <div className="text-blue-500 text-xl mr-4">{info.icon}</div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">{info.title}</h3>
-                <p className="text-gray-600">{info.description}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </div>
