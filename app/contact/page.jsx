@@ -33,8 +33,8 @@ const Contact = () => {
     className="py-6"
   >
     <div className="container mx-auto pt-[60px] xl:pt-[150px]">
-      <div className="flex flex-col md:flex-row gap-12">
-        <div className="md:w-1/2">
+      <div className="flex flex-col md:flex-row gap-[30px]">
+        <div className="xl:h-[54%] order-2 xl:order-none">
           <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
           <p className="text-gray-600 mb-8">
             Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.
