@@ -48,7 +48,7 @@ const Contact = () => {
             <Button type="submit">Send Message</Button>
           </form>
         </div>
-        <div className="md:w-1/2">
+        <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
           <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
           <p className="text-gray-600 mb-8">
             Here are some ways you can reach out to me.
