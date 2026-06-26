@@ -39,13 +39,11 @@ const Contact = () => {
             <h3 className='text-4xl text-accent'>Lets Work Together</h3>
             <p className='text-white/60'>Feel free to reach out to me for any inquiries or collaborations. I'm always open to discussing new projects and opportunities.</p>
             <div>
-              <Input placeholder="Your Name" />
-            </div>
-            <div>
-              <Input placeholder="Your Email" />
-            </div>
-            <div>
-              <Textarea placeholder="Your Message" rows={5} />
+              <Input type="firstname" placeholder="First Name" />
+              <Input type="lastname" placeholder="Last Name" />
+              <Input type="email" placeholder="Email" />
+              <Input type="phone" placeholder="Phone" />
+              <Input type="subject" placeholder="Subject" />
             </div>
             <Button type="submit">Send Message</Button>
           </form>
