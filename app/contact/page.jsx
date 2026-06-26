@@ -38,7 +38,7 @@ const Contact = () => {
           <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
             <h3 className='text-4xl text-accent'>Lets Work Together</h3>
             <p className='text-white/60'>Feel free to reach out to me for any inquiries or collaborations. I'm always open to discussing new projects and opportunities.</p>
-            <div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
               <Input type="firstname" placeholder="First Name" />
               <Input type="lastname" placeholder="Last Name" />
               <Input type="email" placeholder="Email" />
