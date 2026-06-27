@@ -55,6 +55,11 @@
   
   body {
     @apply bg-primary text-white leading-loose font-primary;
+    background-image:
+      radial-gradient(ellipse 80% 40% at 50% -10%, rgba(139, 92, 246, 0.18) 0%, transparent 100%),
+      radial-gradient(rgba(139, 92, 246, 0.04) 1px, transparent 1px);
+    background-size: 100% 100%, 48px 48px;
+    background-attachment: fixed;
   }
   .h1 {
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-bold;
@@ -66,9 +71,9 @@
     @apply text-[20px] xl:text-[24px] leading-[1.1] font-bold;
   }
 .text-outline {
-  -webkit-text-stroke: 1px #ffffffff; /* White outline */
+  -webkit-text-stroke: 1px rgba(255,255,255,0.6);
 }
 .text-outline-hover {
-  -webkit-text-stroke: 1px #00ff99; /* Green outline on hover */
+  -webkit-text-stroke: 1px #8b5cf6;
 }
 }
