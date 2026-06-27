@@ -1,52 +1,32 @@
-import React from 'react'
-import { animate, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
-const stairAnimation = {
-    initial: {
-        top: "0%"
-    },
-    animate: {
-        top: "100%"
-    },
-    exit: {
-        top: ["100%", "0%"]
-    }
-}
-const blurAnimation = {
-  initial: {
-    top: "0%",
-    backdropFilter: "blur(10px)"
-  },
-  animate: {
-    top: "100%",
-    backdropFilter: "blur(0px)"
-  },
-  exit: {
-    top: ["100%", "0%"],
-    backdropFilter: ["blur(0px)", "blur(10px)"]
-  }
-}
+const totalStrips = 6;
 
-const reverseIndex = (index) => {
-    const totalSteps = 10;
-    return totalSteps - index - 1;
-}
 const Stairs = () => {
   return (
     <>
-      {[...Array(10)].map((_, index) => (
+      {[...Array(totalStrips)].map((_, index) => (
         <motion.div
           key={index}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          variants={blurAnimation}
-          transition={{
-            duration: 0.4,
-            ease: "easeInOut",
-            delay: reverseIndex(index) * 0.1
+          initial={{ scaleY: 1 }}
+          animate={{
+            scaleY: 0,
+            transition: {
+              duration: 0.5,
+              ease: [0.22, 1, 0.36, 1],
+              delay: index * 0.07,
+            },
           }}
-          className="w-full h-full bg-white relative"
+          exit={{
+            scaleY: 1,
+            transition: {
+              duration: 0.35,
+              ease: [0.76, 0, 0.24, 1],
+              delay: index * 0.05,
+            },
+          }}
+          style={{ transformOrigin: "top" }}
+          className="w-full h-full bg-accent relative"
         />
       ))}
     </>
