@@ -45,9 +45,9 @@ const config = {
           hover: "hsl(var(--accent-hover))",
         },
         popover: {
-          DEFAULT: '#00ff99',
+          DEFAULT: '#8b5cf6',
           foreground: "hsl(var(--popover-foreground))",
-          hover: '#00e187',
+          hover: '#7c3aed',
         },
         card: {
           DEFAULT: "hsl(var(--card))",
