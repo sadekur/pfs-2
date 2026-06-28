@@ -59,7 +59,7 @@ const projects = [
     ],
     image: "/assets/work/thumb3.png",
     github: "https://github.com/sadekur",
-    live: null,
+    live: "https://wordpress.org/plugins/legal-pages/",
   },
   {
     num: "04",
@@ -75,7 +75,7 @@ const projects = [
     ],
     image: "/assets/work/thumb1.png",
     github: "https://github.com/sadekur",
-    live: null,
+    live: "https://wordpress.org/plugins/easycommerce/",
   },
   {
     num: "05",
@@ -91,14 +91,14 @@ const projects = [
     ],
     image: "/assets/work/thumb2.png",
     github: "https://github.com/sadekur",
-    live: null,
+    live: "https://wordpress.org/plugins/password-less-login/",
   },
   {
     num: "06",
     category: "WooCommerce · Plugin",
     title: "Order Barcode for WC",
     description:
-      "WooCommerce extension for automatic order barcode generation, published on WordPress.org. Also built Thrail CRM (CRM integration) and Product Testimonial (testimonial management) for WP.org.",
+      "WooCommerce extension for automatic barcode generation on orders, published on WordPress.org. Allows customers and store managers to identify orders instantly via unique barcodes.",
     stack: [
       { name: "WooCommerce" },
       { name: "WordPress" },
@@ -107,7 +107,23 @@ const projects = [
     ],
     image: "/assets/work/thumb3.png",
     github: "https://github.com/sadekur",
-    live: null,
+    live: "https://wordpress.org/plugins/order-barcode-for-wc/",
+  },
+  {
+    num: "07",
+    category: "WordPress Plugin",
+    title: "Thrail CRM",
+    description:
+      "CRM integration plugin for WordPress, published on WordPress.org. Enables businesses to manage customer relationships and contacts directly from the WordPress dashboard.",
+    stack: [
+      { name: "WordPress" },
+      { name: "PHP" },
+      { name: "MySQL" },
+      { name: "REST API" },
+    ],
+    image: "/assets/work/thumb1.png",
+    github: "https://github.com/sadekur",
+    live: "https://wordpress.org/plugins/thrail-crm/",
   },
 ];
 
