@@ -47,7 +47,7 @@ const Photo = () => {
           }}
           className='absolute inset-0 flex justify-center items-center overflow-hidden rounded-full'
         >
-          <div className='w-[280px] h-[280px] mt-[-50px] xl:w-[470px] xl:h-[550px] relative mix-blend-lighten'>
+          <div className='w-[240px] h-[240px] md:w-[280px] md:h-[280px] lg:w-[360px] lg:h-[430px] xl:w-[470px] xl:h-[550px] mt-[-50px] relative mix-blend-lighten'>
             <Image
               src="/assets/photo.png"
               priority
