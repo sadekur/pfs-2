@@ -50,11 +50,7 @@ const Work = () => {
   };
 
   return (
-    <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }}
-    className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
-  >
+    <div className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
     <div className="container mx-auto pt-[60px] lg:pt-[150px]">
       <div className="flex flex-col lg:flex-row lg:gap-[30px]">
         <div className="w-full lg:w-[50%] lg:h-[460px] flex flex-col lg:justify-between order-2 lg:order-none">
