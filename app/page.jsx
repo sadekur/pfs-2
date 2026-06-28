@@ -4,6 +4,7 @@ import { FileDiffIcon } from "lucide-react";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Status from "@/components/Status";
+import HeroGlow from "@/components/HeroGlow";
 
 const Home = () => {
   return (
