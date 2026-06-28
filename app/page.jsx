@@ -8,7 +8,8 @@ import HeroGlow from "@/components/HeroGlow";
 
 const Home = () => {
   return (
-    <section className="h-full">
+    <section className="h-full relative overflow-hidden">
+      <HeroGlow />
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row justify-between items-center xl:pt-8 xl:pb-24">
           <div className="pt-5 xl:pt-[150px] text-center xl:text-left order-2 xl:order-none">
