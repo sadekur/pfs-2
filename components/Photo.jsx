@@ -16,7 +16,7 @@ const Photo = () => {
       >
         {/* Animated ring SVG */}
         <motion.svg
-          className='w-[300px] h-[300px] xl:w-[500px] xl:h-[500px]'
+          className='w-[260px] h-[260px] md:w-[300px] md:h-[300px] lg:w-[390px] lg:h-[390px] xl:w-[500px] xl:h-[500px]'
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"
