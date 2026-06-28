@@ -43,7 +43,7 @@ const Photo = () => {
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
-            transition: { delay: 2.0, duration: 0.4, ease: 'easeOut' }
+            transition: { delay: 0.2, duration: 0.4, ease: 'easeOut' }
           }}
           className='absolute inset-0 flex justify-center items-center overflow-hidden rounded-full'
         >
