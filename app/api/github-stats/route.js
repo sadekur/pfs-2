@@ -35,6 +35,12 @@ export async function GET() {
     });
 
     const data = await res.json();
+
+    if (!res.ok || data.errors || !data.data?.user) {
+      console.error("GitHub API error:", data.errors ?? data);
+      return Response.json({ error: "GitHub API error" }, { status: 502 });
+    }
+
     const user = data.data.user;
     const contributions = user.contributionsCollection;
 
