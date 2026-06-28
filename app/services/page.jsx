@@ -50,7 +50,7 @@ const Services = () => {
                 </div>
               );
             })}
-          </motion.div>
+          </div>
       </div>
     </section>
   );
