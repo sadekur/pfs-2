@@ -25,7 +25,7 @@ const tabVariants = {
 const about = {
   title: "About Me",
   description:
-    "Software Engineer with 7+ years of experience building production-grade web applications, WordPress plugins, and full-stack MERN solutions. Passionate about clean architecture, API-driven design, and delivering scalable products.",
+    "Software Engineer with 4+ years of experience building production-grade web applications, WordPress plugins, and full-stack MERN solutions. Passionate about clean architecture, API-driven design, and delivering scalable products.",
   info: [
     { fieldName: "Name",        fieldValue: "Md. Sadekur Rahman" },
     { fieldName: "Phone",       fieldValue: "+88-01780664660" },
@@ -41,7 +41,7 @@ const about = {
 const experience = {
   title: "My Experience",
   description:
-    "Over 7 years across software engineering, WordPress plugin development, full-stack MERN applications, frontend engineering, quality assurance, and government IT — from junior roles to production-level software engineering.",
+    "Over 4 years across software engineering, WordPress plugin development, full-stack MERN applications, frontend engineering, quality assurance, and government IT — from junior roles to production-level software engineering.",
   items: [
     {
       company: "Progressive Byte",
