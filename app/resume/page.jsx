@@ -341,7 +341,7 @@ const Resume = () => {
         </div>
       </Tabs>
     </div>
-    </motion.div>
+    </div>
   )
 };
 
