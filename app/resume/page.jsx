@@ -29,7 +29,7 @@ const about = {
   info: [
     { fieldName: "Name",        fieldValue: "Md. Sadekur Rahman" },
     { fieldName: "Phone",       fieldValue: "+88-01780664660" },
-    { fieldName: "Experience",  fieldValue: "7+ Years" },
+    { fieldName: "Experience",  fieldValue: "4+ Years" },
     { fieldName: "Location",    fieldValue: "Uttor Shyamoli, Dhaka" },
     { fieldName: "Nationality", fieldValue: "Bangladeshi" },
     { fieldName: "Email",       fieldValue: "shadekur.rahman60@gmail.com" },
