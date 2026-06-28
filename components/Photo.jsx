@@ -38,16 +38,16 @@ const Photo = () => {
           />
         </motion.svg>
 
-        {/* Photo — absolutely centered over the ring, no negative margins */}
+        {/* Photo — fills the full circle, no gap at the bottom */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{
             opacity: 1,
             transition: { delay: 0.2, duration: 0.4, ease: 'easeOut' }
           }}
-          className='absolute inset-0 flex justify-center items-center overflow-hidden rounded-full'
+          className='absolute inset-0 overflow-hidden rounded-full'
         >
-          <div className='w-[240px] h-[240px] md:w-[280px] md:h-[280px] lg:w-[360px] lg:h-[430px] xl:w-[470px] xl:h-[550px] mt-[-50px] relative mix-blend-lighten'>
+          <div className='relative w-full h-full mix-blend-lighten'>
             <Image
               src="/assets/photo.png"
               priority
