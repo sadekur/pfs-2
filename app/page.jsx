@@ -8,11 +8,11 @@ import HeroGlow from "@/components/HeroGlow";
 
 const Home = () => {
   return (
-    <section className="h-full relative overflow-hidden">
+    <section className="h-full relative overflow-hidden pt-[90px] lg:pt-0">
       <HeroGlow />
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row justify-between items-center xl:pt-8 xl:pb-24">
-          <div className="pt-5 xl:pt-[150px] text-center xl:text-left order-2 xl:order-none">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:pt-8 lg:pb-24">
+          <div className="pt-4 lg:pt-[150px] text-center lg:text-left order-2 lg:order-none">
             <span className="text-xl">Softwere Engineer</span>
             <h1 className="h1 mb-6">
               Hello I'm <br />{" "}
@@ -23,7 +23,7 @@ const Home = () => {
               applications using modern technologies. I love creating efficient
               and scalable solutions that solve real-world problems.
             </p>
-            <div className="flex flex-col xl:flex-row items-center gap-8 ">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
               <Button
                 variant="outline"
                 size="lg"
@@ -31,7 +31,7 @@ const Home = () => {
               >
                 <span>Download CV</span> <FileDiffIcon className="text-lg" />
               </Button>
-              <div className="mb-8 xl:mb-0">
+              <div className="mb-4 sm:mb-0">
                 <Social
                   containerStyles={"flex gap-6"}
                   iconStyles={
@@ -41,7 +41,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="order-1 xl:order-none pt-[100px] xl:pt-0 mb-8 xl:mb-0">
+          <div className="order-1 lg:order-none mb-6 lg:mb-0">
             <Photo />
           </div>
         </div>
