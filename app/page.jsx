@@ -16,7 +16,7 @@ const Home = () => {
             <span className="text-xl">Softwere Engineer</span>
             <h1 className="h1 mb-6">
               Hello I'm <br />{" "}
-              <span className="text-accent">Sadekur Rahman</span>
+              <span className="text-gradient">Sadekur Rahman</span>
             </h1>
             <p className="mb-9 max-w-[500px] text-white/80">
               I am a passionate software engineer with expertise in building web
