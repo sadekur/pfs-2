@@ -164,7 +164,7 @@ const Work = () => {
                   <span className="text-sm text-accent uppercase tracking-widest">
                     {project.category}
                   </span>
-                  <h2 className="text-[36px] xl:text-[42px] font-bold leading-tight text-white mt-1">
+                  <h2 className="text-[36px] xl:text-[42px] font-bold leading-tight text-gradient mt-1">
                     {project.title}
                   </h2>
                 </div>
