@@ -10,17 +10,17 @@ const contactInfo = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "+880 1234 5678",
+    description: "+88-01780664660",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "O2T0M@example.com",
+    description: "shadekur.rahman60@gmail.com",
   },
   {
     icon: <FaMapMarkerAlt />,
     title: "Address",
-    description: "123 Main Street, City, Country",
+    description: "Uttor Shyamoli, Dhaka, Bangladesh",
   },
 ];
 
