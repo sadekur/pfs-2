@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { Button } from "./ui/button";
 import Nav from "./Nav";
 import MobileNav from "./MobileNav";
+import HireMeModal from "./HireMeModal";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
