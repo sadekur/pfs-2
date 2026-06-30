@@ -156,7 +156,7 @@ const Resume = () => {
                 {/* ── Experience ── */}
                 {activeTab === "experience" && (
                   <div className="flex flex-col gap-[38px] text-center xl:text-left">
-                    <h3 className="text-4xl font-bold">{experience.title}</h3>
+                    <h3 className="text-4xl font-bold text-gradient">{experience.title}</h3>
                     <p className="text-white/60 max-w-[600px] mx-auto xl:mx-0">{experience.description}</p>
                     <ScrollArea className="h-[400px]">
                       <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
