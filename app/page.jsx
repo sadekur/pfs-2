@@ -25,13 +25,15 @@ const Home = () => {
               and scalable solutions that solve real-world problems.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2 hover:bg-accent hover:text-primary transition-all duration-300"
-              >
-                <span>Download CV</span> <FileDiffIcon className="text-lg" />
-              </Button>
+              <Link href="/assets/CV-Sadekur-Rahman.pdf" download="CV-Sadekur-Rahman.pdf" target="_blank">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2 hover:bg-accent hover:text-primary transition-all duration-300"
+                >
+                  <span>Download CV</span> <FileDiffIcon className="text-lg" />
+                </Button>
+              </Link>
               <div className="mb-4 sm:mb-0">
                 <Social
                   containerStyles={"flex gap-6"}
