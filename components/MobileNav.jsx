@@ -6,26 +6,12 @@ import { Sheet, SheetContent, SheetTrigger } from './ui/sheet'
 import Link from "next/link";
 
 const links = [
-    {
-        name: 'home',
-        href: '/'
-    },
-    {
-        name: 'services',
-        href: '/services'
-    },
-    {
-        name: 'resume',
-        href: '/resume'
-    },
-    {
-        name: 'work',
-        href: '/work'
-    },
-    {
-        name: 'contact',
-        href: '/contact'
-    }
+    { name: 'home',     href: '/' },
+    { name: 'services', href: '/services' },
+    { name: 'resume',   href: '/resume' },
+    { name: 'work',     href: '/work' },
+    { name: 'blog',     href: '/blog' },
+    { name: 'contact',  href: '/contact' },
 ]
 
 const MobileNav = () => {
