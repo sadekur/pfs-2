@@ -78,7 +78,7 @@
   -webkit-text-stroke: 1px #8b5cf6;
 }
 .text-gradient {
-  background: linear-gradient(95deg, #ffffff 0%, #e2d9ff 45%, #c4b5fd 100%);
+  background: linear-gradient(100deg, #ffffff 0%, #e9d5ff 18%, #c084fc 42%, #a855f7 65%, #7c3aed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
