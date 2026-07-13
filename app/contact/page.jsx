@@ -3,8 +3,14 @@ import React from 'react'
 import { Button } from "@/components/ui/button";
 import { Imput, Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CustomSelect } from "@/components/ui/CustomSelect";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
+const serviceOptions = [
+  { value: "service1", label: "Modern Wordpress Plugin Development" },
+  { value: "service2", label: "Mern Stack Development" },
+  { value: "service3", label: "SASS Development" },
+];
 
 const contactInfo = [
   {
