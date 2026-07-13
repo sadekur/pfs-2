@@ -5,15 +5,15 @@ import { IoMdClose } from "react-icons/io";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { CustomSelect } from "@/components/ui/CustomSelect";
+
+const serviceOptions = [
+  { value: "wp-plugin", label: "WordPress Plugin Development" },
+  { value: "mern", label: "MERN Stack Development" },
+  { value: "frontend", label: "Frontend Development" },
+  { value: "api", label: "REST API Development" },
+  { value: "devops", label: "CI/CD & Deployment" },
+];
 
 const HireMeModal = () => {
   return (
