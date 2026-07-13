@@ -1,7 +1,7 @@
 "use client";
 import { motion } from 'framer-motion'
-import Image from 'next/image';
 import React from 'react'
+import PixelPhoto from './PixelPhoto'
 
 const Photo = () => {
   return (
@@ -48,14 +48,7 @@ const Photo = () => {
           className='absolute inset-0 overflow-hidden rounded-full'
         >
           <div className='relative w-full h-full mix-blend-lighten'>
-            <Image
-              src="/assets/photo.png"
-              priority
-              quality={100}
-              fill
-              alt="Sadekur Rahman"
-              className="object-cover object-top"
-            />
+            <PixelPhoto src="/assets/photo.png" className="absolute inset-0 w-full h-full" />
           </div>
         </motion.div>
       </motion.div>
