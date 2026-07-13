@@ -45,19 +45,12 @@ const Contact = () => {
               <Input type="phone" placeholder="Phone" />
             </div>
             <div className="w-full">
-              <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Services</SelectLabel>
-                    <SelectItem value="service1">Modern Wordpress Plugin Development</SelectItem>
-                    <SelectItem value="service2">Mern Stack Development</SelectItem>
-                    <SelectItem value="service3">SASS Development</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
+              <CustomSelect
+                name="service"
+                placeholder="Select a service"
+                groupLabel="Services"
+                options={serviceOptions}
+              />
             </div>
             <Textarea className="h-[200px] w-full" placeholder="type Your Message Here " />
             <Button size="md" className="max-w-40" type="submit">Send Message</Button>
