@@ -1,16 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import { FileDiffIcon } from "lucide-react";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Status from "@/components/Status";
 import HeroGlow from "@/components/HeroGlow";
-
-const HeroScene = dynamic(() => import("@/components/HeroScene"), {
-  ssr: false,
-});
+import HeroScene from "@/components/HeroScene";
 
 const Home = () => {
   return (
