@@ -54,21 +54,12 @@ const HireMeModal = () => {
               <Input type="tel" placeholder="Phone" />
             </div>
 
-            <Select>
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select a service" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectLabel>Services</SelectLabel>
-                  <SelectItem value="wp-plugin">WordPress Plugin Development</SelectItem>
-                  <SelectItem value="mern">MERN Stack Development</SelectItem>
-                  <SelectItem value="frontend">Frontend Development</SelectItem>
-                  <SelectItem value="api">REST API Development</SelectItem>
-                  <SelectItem value="devops">CI/CD &amp; Deployment</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
+            <CustomSelect
+              name="service"
+              placeholder="Select a service"
+              groupLabel="Services"
+              options={serviceOptions}
+            />
 
             <Textarea className="h-[140px]" placeholder="Tell me about your project..." />
 
