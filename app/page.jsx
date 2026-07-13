@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Button } from "@/components/ui/button";
 import { FileDiffIcon } from "lucide-react";
 import Social from "@/components/Social";
@@ -7,10 +8,17 @@ import Photo from "@/components/Photo";
 import Status from "@/components/Status";
 import HeroGlow from "@/components/HeroGlow";
 
+const HeroScene = dynamic(() => import("@/components/HeroScene"), {
+  ssr: false,
+});
+
 const Home = () => {
   return (
     <section className="h-full relative overflow-hidden pt-[90px] lg:pt-0">
       <HeroGlow />
+      <div className="hidden lg:block absolute right-0 top-0 w-1/2 h-full pointer-events-none">
+        <HeroScene />
+      </div>
       <div className="container mx-auto h-full">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:pt-8 lg:pb-24">
           <div className="pt-4 lg:pt-[150px] text-center lg:text-left order-2 lg:order-none">
