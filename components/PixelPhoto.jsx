@@ -1,19 +1,18 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-const MIN_PIXEL = 1;
 const MAX_PIXEL = 26;
-const MAX_DISTANCE = 380;
-const EASE = 0.08;
+const REVEAL_DURATION = 1200; // ms
+
+const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
 
 export default function PixelPhoto({ src, className = "" }) {
   const wrapRef = useRef(null);
   const canvasRef = useRef(null);
   const smallCanvasRef = useRef(null);
   const imgRef = useRef(null);
-  const pixelSize = useRef(MAX_PIXEL);
-  const targetPixelSize = useRef(MAX_PIXEL);
-  const mouse = useRef({ x: -9999, y: -9999 });
+  const startTimeRef = useRef(null);
+  const resolvedRef = useRef(false);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -24,44 +23,9 @@ export default function PixelPhoto({ src, className = "" }) {
     img.src = src;
     imgRef.current = img;
 
-    const onMove = (e) => {
-      mouse.current.x = e.clientX;
-      mouse.current.y = e.clientY;
-    };
-    window.addEventListener("mousemove", onMove);
-
     let rafId;
-    const tick = () => {
-      const wrap = wrapRef.current;
-      if (wrap) {
-        const rect = wrap.getBoundingClientRect();
-        const cx = rect.left + rect.width / 2;
-        const cy = rect.top + rect.height / 2;
-        const dist = Math.hypot(mouse.current.x - cx, mouse.current.y - cy);
-        const t = Math.min(1, Math.max(0, dist / MAX_DISTANCE));
-        targetPixelSize.current = MIN_PIXEL + t * (MAX_PIXEL - MIN_PIXEL);
-      }
 
-      pixelSize.current += (targetPixelSize.current - pixelSize.current) * EASE;
-      draw();
-      rafId = requestAnimationFrame(tick);
-    };
-
-    const draw = () => {
-      const wrap = wrapRef.current;
-      const img = imgRef.current;
-      if (!wrap || !img || !img.complete || !img.naturalWidth) return;
-
-      const rect = wrap.getBoundingClientRect();
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      const w = Math.max(1, Math.round(rect.width * dpr));
-      const h = Math.max(1, Math.round(rect.height * dpr));
-      if (canvas.width !== w || canvas.height !== h) {
-        canvas.width = w;
-        canvas.height = h;
-      }
-
-      // object-fit: cover, object-position: top
+    const getCropRect = (w, h) => {
       const targetRatio = w / h;
       const srcRatio = img.naturalWidth / img.naturalHeight;
       let sx, sy, sw, sh;
@@ -76,10 +40,38 @@ export default function PixelPhoto({ src, className = "" }) {
         sx = 0;
         sy = 0;
       }
+      return { sx, sy, sw, sh };
+    };
 
-      const size = pixelSize.current;
-      const pw = Math.max(1, Math.round(w / size));
-      const ph = Math.max(1, Math.round(h / size));
+    const resizeCanvas = () => {
+      const rect = wrapRef.current.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const w = Math.max(1, Math.round(rect.width * dpr));
+      const h = Math.max(1, Math.round(rect.height * dpr));
+      if (canvas.width !== w || canvas.height !== h) {
+        canvas.width = w;
+        canvas.height = h;
+      }
+      return { w, h };
+    };
+
+    // Final, single-pass crisp draw straight from the source image.
+    const drawSharp = () => {
+      if (!img.complete || !img.naturalWidth) return;
+      const { w, h } = resizeCanvas();
+      const { sx, sy, sw, sh } = getCropRect(w, h);
+      ctx.imageSmoothingEnabled = true;
+      ctx.clearRect(0, 0, w, h);
+      ctx.drawImage(img, sx, sy, sw, sh, 0, 0, w, h);
+    };
+
+    const drawPixelated = (pixelSize) => {
+      if (!img.complete || !img.naturalWidth) return;
+      const { w, h } = resizeCanvas();
+      const { sx, sy, sw, sh } = getCropRect(w, h);
+
+      const pw = Math.max(1, Math.round(w / pixelSize));
+      const ph = Math.max(1, Math.round(h / pixelSize));
 
       const small = smallCanvasRef.current;
       small.width = pw;
@@ -89,20 +81,39 @@ export default function PixelPhoto({ src, className = "" }) {
       sctx.clearRect(0, 0, pw, ph);
       sctx.drawImage(img, sx, sy, sw, sh, 0, 0, pw, ph);
 
-      ctx.imageSmoothingEnabled = size < 1.5;
+      ctx.imageSmoothingEnabled = false;
       ctx.clearRect(0, 0, w, h);
       ctx.drawImage(small, 0, 0, pw, ph, 0, 0, w, h);
     };
 
-    img.onload = () => draw();
-    rafId = requestAnimationFrame(tick);
+    const tick = (now) => {
+      if (startTimeRef.current === null) startTimeRef.current = now;
+      const elapsed = now - startTimeRef.current;
+      const progress = Math.min(1, elapsed / REVEAL_DURATION);
 
-    const ro = new ResizeObserver(() => draw());
-    if (wrapRef.current) ro.observe(wrapRef.current);
+      if (progress >= 1) {
+        resolvedRef.current = true;
+        drawSharp();
+        return; // reveal done, stop the loop
+      }
+
+      const eased = easeOutCubic(progress);
+      const pixelSize = MAX_PIXEL - eased * (MAX_PIXEL - 1);
+      drawPixelated(pixelSize);
+      rafId = requestAnimationFrame(tick);
+    };
+
+    img.onload = () => {
+      rafId = requestAnimationFrame(tick);
+    };
+
+    const ro = new ResizeObserver(() => {
+      if (resolvedRef.current) drawSharp();
+    });
+    ro.observe(wrapRef.current);
 
     return () => {
       cancelAnimationFrame(rafId);
-      window.removeEventListener("mousemove", onMove);
       ro.disconnect();
     };
   }, [src]);
