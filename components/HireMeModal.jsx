@@ -5,15 +5,15 @@ import { IoMdClose } from "react-icons/io";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { CustomSelect } from "@/components/ui/CustomSelect";
+
+const serviceOptions = [
+  { value: "wp-plugin", label: "WordPress Plugin Development" },
+  { value: "mern", label: "MERN Stack Development" },
+  { value: "frontend", label: "Frontend Development" },
+  { value: "api", label: "REST API Development" },
+  { value: "devops", label: "CI/CD & Deployment" },
+];
 
 const HireMeModal = () => {
   return (
@@ -54,21 +54,12 @@ const HireMeModal = () => {
               <Input type="tel" placeholder="Phone" />
             </div>
 
-            <Select>
-              <SelectTrigger className="w-full">
-                <SelectValue placeholder="Select a service" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectGroup>
-                  <SelectLabel>Services</SelectLabel>
-                  <SelectItem value="wp-plugin">WordPress Plugin Development</SelectItem>
-                  <SelectItem value="mern">MERN Stack Development</SelectItem>
-                  <SelectItem value="frontend">Frontend Development</SelectItem>
-                  <SelectItem value="api">REST API Development</SelectItem>
-                  <SelectItem value="devops">CI/CD &amp; Deployment</SelectItem>
-                </SelectGroup>
-              </SelectContent>
-            </Select>
+            <CustomSelect
+              name="service"
+              placeholder="Select a service"
+              groupLabel="Services"
+              options={serviceOptions}
+            />
 
             <Textarea className="h-[140px]" placeholder="Tell me about your project..." />
 

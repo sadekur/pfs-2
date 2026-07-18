@@ -3,8 +3,14 @@ import React from 'react'
 import { Button } from "@/components/ui/button";
 import { Imput, Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { CustomSelect } from "@/components/ui/CustomSelect";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+
+const serviceOptions = [
+  { value: "service1", label: "Modern Wordpress Plugin Development" },
+  { value: "service2", label: "Mern Stack Development" },
+  { value: "service3", label: "SASS Development" },
+];
 
 const contactInfo = [
   {
@@ -39,19 +45,12 @@ const Contact = () => {
               <Input type="phone" placeholder="Phone" />
             </div>
             <div className="w-full">
-              <Select>
-                <SelectTrigger className="w-full">
-                  <SelectValue placeholder="Select a service" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Services</SelectLabel>
-                    <SelectItem value="service1">Modern Wordpress Plugin Development</SelectItem>
-                    <SelectItem value="service2">Mern Stack Development</SelectItem>
-                    <SelectItem value="service3">SASS Development</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
+              <CustomSelect
+                name="service"
+                placeholder="Select a service"
+                groupLabel="Services"
+                options={serviceOptions}
+              />
             </div>
             <Textarea className="h-[200px] w-full" placeholder="type Your Message Here " />
             <Button size="md" className="max-w-40" type="submit">Send Message</Button>

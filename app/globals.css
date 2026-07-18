@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scrollbar-gutter: stable;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -82,5 +86,13 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+.ticker-mask {
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, transparent 0%, black 20%, black 80%, transparent 100%);
+}
+@keyframes ticker-scroll {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
 }
 }
