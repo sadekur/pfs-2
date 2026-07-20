@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { IoMdClose } from "react-icons/io";
 import { Button } from "@/components/ui/button";
@@ -15,7 +15,51 @@ const serviceOptions = [
   { value: "devops", label: "CI/CD & Deployment" },
 ];
 
+const initialFormState = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  service: "",
+  message: "",
+};
+
 const HireMeModal = () => {
+  const [formData, setFormData] = useState(initialFormState);
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("sending");
+    setErrorMessage("");
+
+    try {
+      const selectedService = serviceOptions.find((option) => option.value === formData.service)?.label;
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...formData, service: selectedService }),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Something went wrong.");
+      }
+
+      setStatus("success");
+      setFormData(initialFormState);
+    } catch (error) {
+      setStatus("error");
+      setErrorMessage(error.message);
+    }
+  };
+
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>
