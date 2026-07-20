@@ -90,12 +90,12 @@ const HireMeModal = () => {
           </div>
 
           {/* Form */}
-          <form className="flex flex-col gap-5" onSubmit={(e) => e.preventDefault()}>
+          <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Input type="text" placeholder="First Name" />
-              <Input type="text" placeholder="Last Name" />
-              <Input type="email" placeholder="Email" />
-              <Input type="tel" placeholder="Phone" />
+              <Input required name="firstName" type="text" placeholder="First Name" value={formData.firstName} onChange={handleChange} />
+              <Input required name="lastName" type="text" placeholder="Last Name" value={formData.lastName} onChange={handleChange} />
+              <Input required name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} />
+              <Input name="phone" type="tel" placeholder="Phone" value={formData.phone} onChange={handleChange} />
             </div>
 
             <CustomSelect
@@ -103,13 +103,22 @@ const HireMeModal = () => {
               placeholder="Select a service"
               groupLabel="Services"
               options={serviceOptions}
+              value={formData.service}
+              onValueChange={(value) => setFormData((prev) => ({ ...prev, service: value }))}
             />
 
-            <Textarea className="h-[140px]" placeholder="Tell me about your project..." />
+            <Textarea required name="message" className="h-[140px]" placeholder="Tell me about your project..." value={formData.message} onChange={handleChange} />
 
-            <Button type="submit" size="md" className="w-full">
-              Send Message
+            <Button type="submit" size="md" className="w-full" disabled={status === "sending"}>
+              {status === "sending" ? "Sending..." : "Send Message"}
             </Button>
+
+            {status === "success" && (
+              <p className="text-green-400 text-sm text-center">Thanks! Your message has been sent — I'll get back to you soon.</p>
+            )}
+            {status === "error" && (
+              <p className="text-red-400 text-sm text-center">{errorMessage || "Something went wrong. Please try again."}</p>
+            )}
           </form>
         </Dialog.Content>
       </Dialog.Portal>
